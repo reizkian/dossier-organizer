@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
-NavigationStack=ListDocumentPage,readBlob,66,0,ListDocumentPage,Class_Globals,9,0,DossierPage,Class_Globals,16,4,ScanDocumentPage,Class_Globals,27,0,DossierPage,Activity_KeyPress,62,0,Visual Designer,listview_element.bal,-100,6,DossierPage,CheckBoxSelect_CheckedChange,96,0,DossierPage,readBlob,81,0,DossierPage,createDocumentsListItem,90,6,DossierPage,renderDocumentsList,71,6
+NavigationStack=Main,Create_Menu,65,0,B4XMainPage,Class_Globals,22,0,ScanDocumentPage,saveBlob,189,0,Visual Designer,ScanDocument.bal,-100,4,ScanDocumentPage,SaveDocumentButton_Click,205,0,ScanDocumentPage,OpenGalleryButton_Click,219,6,ScanDocumentPage,ScanDocumentButton_Click,75,0,ScanDocumentPage,Class_Globals,12,6,ScanDocumentPage,TakePicture,102,0,ScanDocumentPage,image_chooser_Result,221,6
 SelectedBuild=0
 VisibleModules=1,6,4,3

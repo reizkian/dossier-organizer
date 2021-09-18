@@ -136,7 +136,7 @@ RDebugUtils.currentLine=1966088;
 __ref._id /*int*/  = _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetInt("ID");
 RDebugUtils.currentLine=1966089;
  //BA.debugLineNum = 1966089;BA.debugLine="Log(ID)";
-__c.LogImpl("81966089",BA.NumberToString(__ref._id /*int*/ ),0);
+__c.LogImpl("51966089",BA.NumberToString(__ref._id /*int*/ ),0);
  }
 };
 RDebugUtils.currentLine=1966091;

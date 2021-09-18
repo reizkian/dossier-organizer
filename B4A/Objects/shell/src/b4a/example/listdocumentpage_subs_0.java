@@ -93,7 +93,7 @@ Debug.locals.put("ba", _ba);
 Debug.ShouldStop(33554432);
  BA.debugLineNum = 27;BA.debugLine="Return Me";
 Debug.ShouldStop(67108864);
-if (true) return __ref;
+Debug.CheckDeviceExceptions();if (true) return __ref;
  BA.debugLineNum = 28;BA.debugLine="End Sub";
 Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable(null);
@@ -259,7 +259,7 @@ Debug.ShouldStop(134217728);
 __ref.setField ("_id" /*RemoteObject*/ ,listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("ID"))));
  BA.debugLineNum = 61;BA.debugLine="Log(ID)";
 Debug.ShouldStop(268435456);
-listdocumentpage.__c.runVoidMethod ("LogImpl","81966089",BA.NumberToString(__ref.getField(true,"_id" /*RemoteObject*/ )),0);
+listdocumentpage.__c.runVoidMethod ("LogImpl","51966089",BA.NumberToString(__ref.getField(true,"_id" /*RemoteObject*/ )),0);
  }
 }Debug.locals.put("i", _i);
 ;

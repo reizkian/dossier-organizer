@@ -34,7 +34,7 @@ Debug.locals.put("KeyCode", _keycode);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 28;BA.debugLine="Return B4XPages.GetManager.Activity_KeyPress (Key";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesdelegator._b4xpages.runMethod(false,"_getmanager" /*RemoteObject*/ ,__ref.runMethod(false,"getActivityBA")).runClassMethod (b4a.example.b4xpagesmanager.class, "_activity_keypress" /*RemoteObject*/ ,(Object)(_keycode));
+Debug.CheckDeviceExceptions();if (true) return b4xpagesdelegator._b4xpages.runMethod(false,"_getmanager" /*RemoteObject*/ ,__ref.runMethod(false,"getActivityBA")).runClassMethod (b4a.example.b4xpagesmanager.class, "_activity_keypress" /*RemoteObject*/ ,(Object)(_keycode));
  BA.debugLineNum = 29;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);

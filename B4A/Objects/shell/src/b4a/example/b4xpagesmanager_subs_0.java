@@ -68,11 +68,11 @@ __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_closepage" /*RemoteOb
  };
  BA.debugLineNum = 458;BA.debugLine="Return True";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.getField(true,"True");
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.getField(true,"True");
  };
  BA.debugLineNum = 460;BA.debugLine="Return False";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.getField(true,"False");
  BA.debugLineNum = 461;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -161,7 +161,7 @@ Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_findpifromb4xpage" /*RemoteObject*/ ,(Object)(_b4xpage)).getField(false,"Parent" /*RemoteObject*/ ).getField(false,"MenuItems" /*RemoteObject*/ ).runVoidMethod ("Add",(Object)((_mi)));
  BA.debugLineNum = 469;BA.debugLine="Return mi";
 Debug.JustUpdateDeviceLine();
-if (true) return _mi;
+Debug.CheckDeviceExceptions();if (true) return _mi;
  BA.debugLineNum = 470;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -192,7 +192,7 @@ Debug.JustUpdateDeviceLine();
 b4xpagesmanager.__c.runVoidMethod ("LogImpl","98781827",(RemoteObject.concat(RemoteObject.createImmutable("Page with this id already exists: "),b4xpagesmanager.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_idtolower))),RemoteObject.createImmutable("!"))),0);
  BA.debugLineNum = 130;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  };
  BA.debugLineNum = 132;BA.debugLine="IdToB4XPage.Put(IdToLower, CreateB4XPageInfo(B4XP";
 Debug.JustUpdateDeviceLine();
@@ -247,7 +247,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 601;BA.debugLine="If IsForeground = NewState Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_isforeground" /*RemoteObject*/ ),_newstate)) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 602;BA.debugLine="IsForeground = NewState";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_isforeground" /*RemoteObject*/ ,_newstate);
@@ -421,7 +421,7 @@ _pi = __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_findpifromb4xpa
  BA.debugLineNum = 196;BA.debugLine="If mStackOfPageIds.Contains(pi.Id) = False Then R";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_contains" /*RemoteObject*/ ,(Object)((_pi.getField(true,"Id" /*RemoteObject*/ )))),b4xpagesmanager.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 197;BA.debugLine="If xui.IsB4i And GetTopPage <> pi Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(".",__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"getIsB4i")) && RemoteObject.solveBoolean("!",__ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_gettoppage" /*RemoteObject*/ ),_pi)) { 
@@ -430,7 +430,7 @@ Debug.JustUpdateDeviceLine();
 b4xpagesmanager.__c.runVoidMethod ("LogImpl","99043972",RemoteObject.createImmutable("Only top page can be closed"),0);
  BA.debugLineNum = 199;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  }else 
 { BA.debugLineNum = 200;BA.debugLine="Else If xui.IsB4i And mStackOfPageIds.Size = 1 Th";
 Debug.JustUpdateDeviceLine();
@@ -440,7 +440,7 @@ Debug.JustUpdateDeviceLine();
 b4xpagesmanager.__c.runVoidMethod ("LogImpl","99043975",RemoteObject.createImmutable("First page cannot be closed"),0);
  BA.debugLineNum = 202;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  }}
 ;
  BA.debugLineNum = 204;BA.debugLine="ClosePageImpl(pi)";
@@ -456,7 +456,7 @@ __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_toppagedisappear" /*R
  BA.debugLineNum = 208;BA.debugLine="If xui.IsB4A And mStackOfPageIds.Size = 1 Then Re";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(".",__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"getIsB4A")) && RemoteObject.solveBoolean("=",__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_getsize" /*RemoteObject*/ ),BA.numberCast(double.class, 1))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 209;BA.debugLine="mStackOfPageIds.Remove(pi.Id)";
 Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_remove" /*RemoteObject*/ ,(Object)((_pi.getField(true,"Id" /*RemoteObject*/ ))));
@@ -527,7 +527,7 @@ Debug.locals.put("pi", _pi);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 517;BA.debugLine="Return xui.SubExists(pi.B4XPage, \"B4XPage_CloseRe";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"SubExists",__ref.getField(false, "ba"),(Object)(_pi.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(BA.ObjectToString("B4XPage_CloseRequest")),(Object)(BA.numberCast(int.class, 0)));
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"SubExists",__ref.getField(false, "ba"),(Object)(_pi.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(BA.ObjectToString("B4XPage_CloseRequest")),(Object)(BA.numberCast(int.class, 0)));
  BA.debugLineNum = 518;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -569,7 +569,7 @@ Debug.JustUpdateDeviceLine();
 _t1.setField ("Title" /*RemoteObject*/ ,_title);
  BA.debugLineNum = 409;BA.debugLine="Return t1";
 Debug.JustUpdateDeviceLine();
-if (true) return _t1;
+Debug.CheckDeviceExceptions();if (true) return _t1;
  BA.debugLineNum = 410;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -599,7 +599,7 @@ Debug.JustUpdateDeviceLine();
 _t1.getField(false,"NativeType" /*RemoteObject*/ ).setObject (_nativetype);
  BA.debugLineNum = 589;BA.debugLine="Return t1";
 Debug.JustUpdateDeviceLine();
-if (true) return _t1;
+Debug.CheckDeviceExceptions();if (true) return _t1;
  BA.debugLineNum = 590;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -629,7 +629,7 @@ _pi = __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_gettoppage" /*R
  BA.debugLineNum = 478;BA.debugLine="If pi = Null Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("n",_pi)) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 479;BA.debugLine="Dim jo As JavaObject = Menu";
 Debug.JustUpdateDeviceLine();
 _jo = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");
@@ -700,7 +700,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 335;BA.debugLine="If pi.Created Then Return";
 Debug.JustUpdateDeviceLine();
 if (_pi.getField(true,"Created" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 336;BA.debugLine="pi.IsFirst = IdToB4XPage.Size = 1";
 Debug.JustUpdateDeviceLine();
 _pi.setField ("IsFirst" /*RemoteObject*/ ,BA.ObjectToBoolean(RemoteObject.solveBoolean("=",__ref.getField(false,"_idtob4xpage" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_getsize" /*RemoteObject*/ ),BA.numberCast(double.class, 1))));
@@ -781,14 +781,14 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_pi.getField(false,"B4XPage" /*RemoteObject*/ ),_page)) { 
  BA.debugLineNum = 291;BA.debugLine="Return pi";
 Debug.JustUpdateDeviceLine();
-if (true) return _pi;
+Debug.CheckDeviceExceptions();if (true) return _pi;
  };
  }
 }Debug.locals.put("pi", _pi);
 ;
  BA.debugLineNum = 294;BA.debugLine="Return Null";
 Debug.JustUpdateDeviceLine();
-if (true) return (b4xpagesmanager.__c.getField(false,"Null"));
+Debug.CheckDeviceExceptions();if (true) return (b4xpagesmanager.__c.getField(false,"Null"));
  BA.debugLineNum = 295;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -808,7 +808,7 @@ Debug.locals.put("Id", _id);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 377;BA.debugLine="Return GetPageFromId(Id).B4XPage";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_getpagefromid" /*RemoteObject*/ ,(Object)(_id)).getField(false,"B4XPage" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_getpagefromid" /*RemoteObject*/ ,(Object)(_id)).getField(false,"B4XPage" /*RemoteObject*/ );
  BA.debugLineNum = 378;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -842,7 +842,7 @@ b4xpagesmanager.__c.runVoidMethod ("LogImpl","99699332",RemoteObject.concat(Remo
  };
  BA.debugLineNum = 386;BA.debugLine="Return pi";
 Debug.JustUpdateDeviceLine();
-if (true) return _pi;
+Debug.CheckDeviceExceptions();if (true) return _pi;
  BA.debugLineNum = 387;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -862,7 +862,7 @@ Debug.locals.put("Root", _root);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 390;BA.debugLine="Return RootB4XToPage.Get(Root)";
 Debug.JustUpdateDeviceLine();
-if (true) return (__ref.getField(false,"_rootb4xtopage" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_get" /*RemoteObject*/ ,(Object)((_root.getObject()))));
+Debug.CheckDeviceExceptions();if (true) return (__ref.getField(false,"_rootb4xtopage" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_get" /*RemoteObject*/ ,(Object)((_root.getObject()))));
  BA.debugLineNum = 391;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -882,10 +882,10 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 575;BA.debugLine="If mStackOfPageIds.Size = 0 Then Return Null";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_getsize" /*RemoteObject*/ ),BA.numberCast(double.class, 0))) { 
-if (true) return (b4xpagesmanager.__c.getField(false,"Null"));};
+Debug.CheckDeviceExceptions();if (true) return (b4xpagesmanager.__c.getField(false,"Null"));};
  BA.debugLineNum = 576;BA.debugLine="Return IdToB4XPage.Get(mStackOfPageIds.AsList.Get";
 Debug.JustUpdateDeviceLine();
-if (true) return (__ref.getField(false,"_idtob4xpage" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_get" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_aslist" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_getsize" /*RemoteObject*/ ),RemoteObject.createImmutable(1)}, "-",1, 1))))));
+Debug.CheckDeviceExceptions();if (true) return (__ref.getField(false,"_idtob4xpage" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_get" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_aslist" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_mstackofpageids" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xset.class, "_getsize" /*RemoteObject*/ ),RemoteObject.createImmutable(1)}, "-",1, 1))))));
  BA.debugLineNum = 577;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -1154,7 +1154,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 531;BA.debugLine="If TargetPage = Null Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("n",_targetpage)) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 532;BA.debugLine="Dim length As Int";
 Debug.JustUpdateDeviceLine();
 _length = RemoteObject.createImmutable(0);Debug.locals.put("length", _length);
@@ -1170,7 +1170,7 @@ __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_logevent" /*RemoteObj
  BA.debugLineNum = 535;BA.debugLine="If xui.SubExists(TargetPage.B4XPage, SubName, len";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"SubExists",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_length)),b4xpagesmanager.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 536;BA.debugLine="Select length";
 Debug.JustUpdateDeviceLine();
 switch (BA.switchObjectToInt(_length,BA.numberCast(int.class, 0),BA.numberCast(int.class, 1),BA.numberCast(int.class, 2))) {
@@ -1219,7 +1219,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 549;BA.debugLine="If TargetPage = Null Then Return Null";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("n",_targetpage)) { 
-if (true) return b4xpagesmanager.__c.getField(false,"Null");};
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.getField(false,"Null");};
  BA.debugLineNum = 550;BA.debugLine="Dim length As Int";
 Debug.JustUpdateDeviceLine();
 _length = RemoteObject.createImmutable(0);Debug.locals.put("length", _length);
@@ -1235,24 +1235,24 @@ __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_logevent" /*RemoteObj
  BA.debugLineNum = 553;BA.debugLine="If xui.SubExists(TargetPage.B4XPage, SubName, len";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"SubExists",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_length)),b4xpagesmanager.__c.getField(true,"False"))) { 
-if (true) return b4xpagesmanager.__c.getField(false,"Null");};
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.getField(false,"Null");};
  BA.debugLineNum = 554;BA.debugLine="Select length";
 Debug.JustUpdateDeviceLine();
 switch (BA.switchObjectToInt(_length,BA.numberCast(int.class, 0),BA.numberCast(int.class, 1),BA.numberCast(int.class, 2))) {
 case 0: {
  BA.debugLineNum = 556;BA.debugLine="Return CallSub(TargetPage.B4XPage, SubName)";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname));
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname));
  break; }
 case 1: {
  BA.debugLineNum = 558;BA.debugLine="Return CallSub2(TargetPage.B4XPage, SubName, Pa";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew2",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 0))));
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew2",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 0))));
  break; }
 case 2: {
  BA.debugLineNum = 560;BA.debugLine="Return CallSub3(TargetPage.B4XPage, SubName, Pa";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew3",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 0))),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 1))));
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.runMethodAndSync(false,"CallSubNew3",__ref.getField(false, "ba"),(Object)(_targetpage.getField(false,"B4XPage" /*RemoteObject*/ )),(Object)(_subname),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 0))),(Object)(_params.getArrayElement(false,BA.numberCast(int.class, 1))));
  break; }
 default: {
  BA.debugLineNum = 562;BA.debugLine="Log(\"Too many parameters\")";
@@ -1263,7 +1263,7 @@ b4xpagesmanager.__c.runVoidMethod ("LogImpl","910354702",RemoteObject.createImmu
 ;
  BA.debugLineNum = 564;BA.debugLine="Return Null";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xpagesmanager.__c.getField(false,"Null");
+Debug.CheckDeviceExceptions();if (true) return b4xpagesmanager.__c.getField(false,"Null");
  BA.debugLineNum = 565;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -1317,7 +1317,7 @@ _pi = __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_getpagefromid" 
  BA.debugLineNum = 143;BA.debugLine="If pi = GetTopPage Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_pi,__ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_gettoppage" /*RemoteObject*/ ))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 144;BA.debugLine="CreatePageIfNeeded(pi)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_createpageifneeded" /*RemoteObject*/ ,(Object)(_pi));
@@ -1373,7 +1373,7 @@ Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_showpage" /*RemoteObject*/ ,(Object)(_id));
  BA.debugLineNum = 168;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  };
  BA.debugLineNum = 170;BA.debugLine="Dim pi As B4XPageInfo = GetPageFromId(Id)";
 Debug.JustUpdateDeviceLine();
@@ -1482,7 +1482,7 @@ _pi = __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_gettoppage" /*R
  BA.debugLineNum = 272;BA.debugLine="If pi = Null Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("n",_pi)) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 273;BA.debugLine="pi.Parent.NativeType.Title = pi.Title";
 Debug.JustUpdateDeviceLine();
 _pi.getField(false,"Parent" /*RemoteObject*/ ).getField(false,"NativeType" /*RemoteObject*/ ).runMethod(false,"setTitle",BA.ObjectToCharSequence(_pi.getField(false,"Title" /*RemoteObject*/ )));
@@ -1530,14 +1530,14 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 260;BA.debugLine="If xui.IsB4J Then Return";
 Debug.JustUpdateDeviceLine();
 if (__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"getIsB4J").<Boolean>get().booleanValue()) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 261;BA.debugLine="Dim pi As B4XPageInfo = GetTopPage";
 Debug.JustUpdateDeviceLine();
 _pi = __ref.runClassMethod (b4a.example.b4xpagesmanager.class, "_gettoppage" /*RemoteObject*/ );Debug.locals.put("pi", _pi);Debug.locals.put("pi", _pi);
  BA.debugLineNum = 262;BA.debugLine="If pi = Null Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("n",_pi)) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 263;BA.debugLine="If Not(xui.IsB4i) Then";
 Debug.JustUpdateDeviceLine();
 if (b4xpagesmanager.__c.runMethod(true,"Not",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"getIsB4i"))).<Boolean>get().booleanValue()) { 

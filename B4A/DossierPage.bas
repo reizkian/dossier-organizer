@@ -99,7 +99,6 @@ Sub createDocumentsListItem(ID As String, docName As String, docScan As Bitmap, 
 	Return item
 End Sub
 
-
 Private Sub CheckBoxSelect_CheckedChange(Checked As Boolean)
 	Dim index As Int = DocumentsListView.GetItemFromView(Sender)
 	Dim panel As B4XView = DocumentsListView.GetPanel(index)

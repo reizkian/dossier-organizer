@@ -27,11 +27,11 @@ Debug.ShouldStop(268435456);
 __ref.getField(false,"_adddossierbtn" /*RemoteObject*/ ).runMethod(true,"setVisible",dossierpage.__c.getField(true,"True"));
  BA.debugLineNum = 62;BA.debugLine="Return False";
 Debug.ShouldStop(536870912);
-if (true) return dossierpage.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return dossierpage.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 64;BA.debugLine="Return True";
 Debug.ShouldStop(-2147483648);
-if (true) return dossierpage.__c.getField(true,"True");
+Debug.CheckDeviceExceptions();if (true) return dossierpage.__c.getField(true,"True");
  };
  BA.debugLineNum = 66;BA.debugLine="End Sub";
 Debug.ShouldStop(2);
@@ -108,30 +108,30 @@ finally {
 		}}
 public static RemoteObject  _checkboxselect_checkedchange(RemoteObject __ref,RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("CheckBoxSelect_CheckedChange (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,97);
+		Debug.PushSubsStack("CheckBoxSelect_CheckedChange (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,96);
 if (RapidSub.canDelegate("checkboxselect_checkedchange")) { return __ref.runUserSub(false, "dossierpage","checkboxselect_checkedchange", __ref, _checked);}
 RemoteObject _index = RemoteObject.createImmutable(0);
 RemoteObject _panel = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _check = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 Debug.locals.put("Checked", _checked);
- BA.debugLineNum = 97;BA.debugLine="Private Sub CheckBoxSelect_CheckedChange(Checked A";
+ BA.debugLineNum = 96;BA.debugLine="Private Sub CheckBoxSelect_CheckedChange(Checked A";
+Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 97;BA.debugLine="Dim index As Int = DocumentsListView.GetItemFromV";
 Debug.ShouldStop(1);
- BA.debugLineNum = 98;BA.debugLine="Dim index As Int = DocumentsListView.GetItemFromV";
-Debug.ShouldStop(2);
 _index = __ref.getField(false,"_documentslistview" /*RemoteObject*/ ).runMethod(true,"_getitemfromview",RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), dossierpage.__c.runMethod(false,"Sender",__ref.getField(false, "ba"))));Debug.locals.put("index", _index);Debug.locals.put("index", _index);
- BA.debugLineNum = 99;BA.debugLine="Dim panel As B4XView = DocumentsListView.GetPanel";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 98;BA.debugLine="Dim panel As B4XView = DocumentsListView.GetPanel";
+Debug.ShouldStop(2);
 _panel = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 _panel = __ref.getField(false,"_documentslistview" /*RemoteObject*/ ).runMethod(false,"_getpanel",(Object)(_index));Debug.locals.put("panel", _panel);Debug.locals.put("panel", _panel);
- BA.debugLineNum = 100;BA.debugLine="Dim check As B4XView = panel.GetView(0).GetView(0";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 99;BA.debugLine="Dim check As B4XView = panel.GetView(0).GetView(0";
+Debug.ShouldStop(4);
 _check = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 _check = _panel.runMethod(false,"GetView",(Object)(BA.numberCast(int.class, 0))).runMethod(false,"GetView",(Object)(BA.numberCast(int.class, 0)));Debug.locals.put("check", _check);Debug.locals.put("check", _check);
- BA.debugLineNum = 101;BA.debugLine="MsgboxAsync($\"Item value: ${DocumentsListView.Get";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 100;BA.debugLine="MsgboxAsync($\"Item value: ${DocumentsListView.Get";
+Debug.ShouldStop(8);
 dossierpage.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence((RemoteObject.concat(RemoteObject.createImmutable("Item value: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)(__ref.getField(false,"_documentslistview" /*RemoteObject*/ ).runMethod(false,"_getvalue",(Object)(_index)))),RemoteObject.createImmutable(" Check value: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_check.runMethod(true,"getChecked")))),RemoteObject.createImmutable(""))))),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable(""))),__ref.getField(false, "ba"));
- BA.debugLineNum = 102;BA.debugLine="End Sub";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 101;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -214,7 +214,7 @@ Debug.ShouldStop(134217728);
 __ref.getField(false,"_picture" /*RemoteObject*/ ).runMethod(false,"setBitmap",(_docscan.getObject()));
  BA.debugLineNum = 93;BA.debugLine="Return item";
 Debug.ShouldStop(268435456);
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _item.getObject());
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _item.getObject());
  BA.debugLineNum = 94;BA.debugLine="End Sub";
 Debug.ShouldStop(536870912);
 return RemoteObject.createImmutable(null);
@@ -235,7 +235,7 @@ Debug.locals.put("ba", _ba);
 Debug.ShouldStop(16777216);
  BA.debugLineNum = 26;BA.debugLine="Return Me";
 Debug.ShouldStop(33554432);
-if (true) return __ref;
+Debug.CheckDeviceExceptions();if (true) return __ref;
  BA.debugLineNum = 27;BA.debugLine="End Sub";
 Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable(null);
@@ -330,7 +330,7 @@ for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 
 Debug.locals.put("i", _i);
  BA.debugLineNum = 72;BA.debugLine="Log(i)";
 Debug.ShouldStop(128);
-dossierpage.__c.runVoidMethod ("LogImpl","82818052",BA.NumberToString(_i),0);
+dossierpage.__c.runVoidMethod ("LogImpl","52818052",BA.NumberToString(_i),0);
  BA.debugLineNum = 73;BA.debugLine="MdlConnection.dbCursor.Position = i";
 Debug.ShouldStop(256);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));

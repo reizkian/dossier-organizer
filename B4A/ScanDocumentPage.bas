@@ -11,6 +11,10 @@ Sub Class_Globals
 	Dim Panel1 As Panel
 	Dim lblBack As Label
 	
+	Dim OpenGalleryButton As Panel
+	Dim Chooser As ContentChooser
+	Dim rp As RuntimePermissions
+	
 	#if B4A
 	Private tempImageFile As String = "tempimage.jpg"
 	Private Provider As FileProvider
@@ -210,6 +214,34 @@ Private Sub SaveDocumentButton_Click
 	'database write'
 	MdlConnection.dbSQL.ExecNonQuery("INSERT INTO documents(DOCUMENT_ID, NAME, TYPE, EXPIRED, SCAN) VALUES('" & documentID & "','" & documentName& "','" & documentType & "','" & documentExpiry & "','" & imgStr & "')")
 	ToastMessageShow("sucessfully saved document",False)
-	
 End Sub
 
+
+
+Private Sub OpenGalleryButton_Click
+	Log("clicked OpenGalleryButton")
+	Chooser.Initialize("image_chooser")
+	rp.CheckAndRequest(rp.PERMISSION_READ_EXTERNAL_STORAGE)
+	Chooser.Show("image/*", "choose image")
+End Sub
+
+Sub image_chooser_Result (Success As Boolean, pDir As String, pFileName As String)
+	Log("execute Chooser_Result")
+	If Success = True Then
+		Log("fileDir: " & pDir)
+		Log("fileName: " & pFileName)
+		
+		Dim bmp As B4XBitmap
+		Try
+			bmp = LoadBitmapSample(pDir,pFileName, Max(scanView.Width, scanView.Height), Max(scanView.Width, scanView.Height))
+			bmp = bmp.Resize(scanView.Width, scanView.Height, True)
+			scanView.Visible = True
+			scanView.SetBitmap(bmp)
+			Log("success read image file")
+		Catch
+			Log(LastException)
+		End Try
+	Else
+		ToastMessageShow("failed read image file",True)
+	End If
+End Sub

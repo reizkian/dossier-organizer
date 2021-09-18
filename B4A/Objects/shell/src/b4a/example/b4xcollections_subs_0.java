@@ -23,7 +23,7 @@ Debug.JustUpdateDeviceLine();
 _s.runClassMethod (b4a.example.b4xbitset.class, "_initialize" /*RemoteObject*/ ,BA.rdebugUtils.runMethod(false, "processBAFromBA", _ba),(Object)(_size));
  BA.debugLineNum = 55;BA.debugLine="Return s";
 Debug.JustUpdateDeviceLine();
-if (true) return _s;
+Debug.CheckDeviceExceptions();if (true) return _s;
  BA.debugLineNum = 56;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -43,7 +43,7 @@ if (RapidSub.canDelegate("createorderedmap")) { return b4a.example.b4xcollection
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 31;BA.debugLine="Return CreateOrderedMap2(Null, Null)";
 Debug.JustUpdateDeviceLine();
-if (true) return _createorderedmap2(_ba,RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")));
+Debug.CheckDeviceExceptions();if (true) return _createorderedmap2(_ba,RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")));
  BA.debugLineNum = 32;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -91,7 +91,7 @@ _m.runClassMethod (b4a.example.b4xorderedmap.class, "_put" /*RemoteObject*/ ,(Ob
  };
  BA.debugLineNum = 46;BA.debugLine="Return m";
 Debug.JustUpdateDeviceLine();
-if (true) return _m;
+Debug.CheckDeviceExceptions();if (true) return _m;
  BA.debugLineNum = 47;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -111,7 +111,7 @@ if (RapidSub.canDelegate("createset")) { return b4a.example.b4xcollections.remot
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 10;BA.debugLine="Return CreateSet2(Null)";
 Debug.JustUpdateDeviceLine();
-if (true) return _createset2(_ba,RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")));
+Debug.CheckDeviceExceptions();if (true) return _createset2(_ba,RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), b4xcollections.mostCurrent.__c.getField(false,"Null")));
  BA.debugLineNum = 11;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -160,7 +160,7 @@ _s.runClassMethod (b4a.example.b4xset.class, "_add" /*RemoteObject*/ ,(Object)(_
  };
  BA.debugLineNum = 24;BA.debugLine="Return s";
 Debug.JustUpdateDeviceLine();
-if (true) return _s;
+Debug.CheckDeviceExceptions();if (true) return _s;
  BA.debugLineNum = 25;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
