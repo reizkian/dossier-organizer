@@ -42,7 +42,7 @@ dbutils.mostCurrent.__c.getField(false,"File").runVoidMethod ("Copy",(Object)(db
  };
  BA.debugLineNum = 32;BA.debugLine="Return TargetDir";
 Debug.ShouldStop(-2147483648);
-Debug.CheckDeviceExceptions();if (true) return _targetdir;
+if (true) return _targetdir;
  BA.debugLineNum = 33;BA.debugLine="End Sub";
 Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");

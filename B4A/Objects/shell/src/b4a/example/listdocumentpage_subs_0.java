@@ -93,7 +93,7 @@ Debug.locals.put("ba", _ba);
 Debug.ShouldStop(33554432);
  BA.debugLineNum = 27;BA.debugLine="Return Me";
 Debug.ShouldStop(67108864);
-Debug.CheckDeviceExceptions();if (true) return __ref;
+if (true) return __ref;
  BA.debugLineNum = 28;BA.debugLine="End Sub";
 Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable(null);
@@ -136,23 +136,23 @@ finally {
 		}}
 public static RemoteObject  _listviewdocuments_itemclick(RemoteObject __ref,RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("ListViewDocuments_ItemClick (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,74);
+		Debug.PushSubsStack("ListViewDocuments_ItemClick (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,73);
 if (RapidSub.canDelegate("listviewdocuments_itemclick")) { return __ref.runUserSub(false, "listdocumentpage","listviewdocuments_itemclick", __ref, _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
- BA.debugLineNum = 74;BA.debugLine="Private Sub ListViewDocuments_ItemClick(Position A";
+ BA.debugLineNum = 73;BA.debugLine="Private Sub ListViewDocuments_ItemClick(Position A";
+Debug.ShouldStop(256);
+ BA.debugLineNum = 74;BA.debugLine="ListPanel.Visible = False";
 Debug.ShouldStop(512);
- BA.debugLineNum = 75;BA.debugLine="ListPanel.Visible = False";
-Debug.ShouldStop(1024);
 __ref.getField(false,"_listpanel" /*RemoteObject*/ ).runMethod(true,"setVisible",listdocumentpage.__c.getField(true,"False"));
- BA.debugLineNum = 76;BA.debugLine="UpdatePanel.Visible = True";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 75;BA.debugLine="UpdatePanel.Visible = True";
+Debug.ShouldStop(1024);
 __ref.getField(false,"_updatepanel" /*RemoteObject*/ ).runMethod(true,"setVisible",listdocumentpage.__c.getField(true,"True"));
- BA.debugLineNum = 77;BA.debugLine="docID.Text = Value";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 76;BA.debugLine="docID.Text = Value";
+Debug.ShouldStop(2048);
 __ref.getField(false,"_docid" /*RemoteObject*/ ).runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_value));
- BA.debugLineNum = 78;BA.debugLine="End Sub";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 77;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -163,31 +163,31 @@ finally {
 		}}
 public static RemoteObject  _listviewdocuments_itemlongclick(RemoteObject __ref,RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("listViewDocuments_ItemLongClick (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,80);
+		Debug.PushSubsStack("listViewDocuments_ItemLongClick (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,79);
 if (RapidSub.canDelegate("listviewdocuments_itemlongclick")) { return __ref.runUserSub(false, "listdocumentpage","listviewdocuments_itemlongclick", __ref, _position, _value);}
 RemoteObject _x = RemoteObject.createImmutable(0);
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
- BA.debugLineNum = 80;BA.debugLine="Private Sub listViewDocuments_ItemLongClick (Posit";
+ BA.debugLineNum = 79;BA.debugLine="Private Sub listViewDocuments_ItemLongClick (Posit";
+Debug.ShouldStop(16384);
+ BA.debugLineNum = 80;BA.debugLine="Dim x As Int";
 Debug.ShouldStop(32768);
- BA.debugLineNum = 81;BA.debugLine="Dim x As Int";
-Debug.ShouldStop(65536);
 _x = RemoteObject.createImmutable(0);Debug.locals.put("x", _x);
- BA.debugLineNum = 82;BA.debugLine="x = Msgbox2(\"Delete document?\",\"info\", \"Yes\",\"\",";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 81;BA.debugLine="x = Msgbox2(\"Delete document?\",\"info\", \"Yes\",\"\",";
+Debug.ShouldStop(65536);
 _x = listdocumentpage.__c.runMethodAndSync(true,"Msgbox2",(Object)(BA.ObjectToCharSequence("Delete document?")),(Object)(BA.ObjectToCharSequence("info")),(Object)(BA.ObjectToString("Yes")),(Object)(BA.ObjectToString("")),(Object)(BA.ObjectToString("No")),(Object)((listdocumentpage.__c.getField(false,"Null"))),__ref.getField(false, "ba"));Debug.locals.put("x", _x);
- BA.debugLineNum = 83;BA.debugLine="If x = DialogResponse.POSITIVE Then";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 82;BA.debugLine="If x = DialogResponse.POSITIVE Then";
+Debug.ShouldStop(131072);
 if (RemoteObject.solveBoolean("=",_x,BA.numberCast(double.class, listdocumentpage.__c.getField(false,"DialogResponse").getField(true,"POSITIVE")))) { 
- BA.debugLineNum = 84;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DELETE FROM do";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 83;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DELETE FROM do";
+Debug.ShouldStop(262144);
 listdocumentpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("DELETE FROM documents WHERE DOCUMENT_ID='"),_value,RemoteObject.createImmutable("'"))));
  };
- BA.debugLineNum = 87;BA.debugLine="renderDataListView";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 86;BA.debugLine="renderDataListView";
+Debug.ShouldStop(2097152);
 __ref.runClassMethod (b4a.example.listdocumentpage.class, "_renderdatalistview" /*RemoteObject*/ );
- BA.debugLineNum = 88;BA.debugLine="End Sub";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 87;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -198,24 +198,24 @@ finally {
 		}}
 public static RemoteObject  _readblob(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("readBlob (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,67);
+		Debug.PushSubsStack("readBlob (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,66);
 if (RapidSub.canDelegate("readblob")) { return __ref.runUserSub(false, "listdocumentpage","readblob", __ref);}
- BA.debugLineNum = 67;BA.debugLine="Sub readBlob";
+ BA.debugLineNum = 66;BA.debugLine="Sub readBlob";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 67;BA.debugLine="Buffer = stringUtils.DecodeBase64(MdlConnection.d";
 Debug.ShouldStop(4);
- BA.debugLineNum = 68;BA.debugLine="Buffer = stringUtils.DecodeBase64(MdlConnection.d";
-Debug.ShouldStop(8);
 __ref.setField ("_buffer" /*RemoteObject*/ ,__ref.getField(false,"_stringutils" /*RemoteObject*/ ).runMethod(false,"DecodeBase64",(Object)(listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("SCAN"))))));
- BA.debugLineNum = 69;BA.debugLine="inputStream.InitializeFromBytesArray(Buffer, 0, B";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 68;BA.debugLine="inputStream.InitializeFromBytesArray(Buffer, 0, B";
+Debug.ShouldStop(8);
 __ref.getField(false,"_inputstream" /*RemoteObject*/ ).runVoidMethod ("InitializeFromBytesArray",(Object)(__ref.getField(false,"_buffer" /*RemoteObject*/ )),(Object)(BA.numberCast(int.class, 0)),(Object)(__ref.getField(false,"_buffer" /*RemoteObject*/ ).getField(true,"length")));
- BA.debugLineNum = 70;BA.debugLine="bitMap.Initialize2(inputStream)";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 69;BA.debugLine="bitMap.Initialize2(inputStream)";
+Debug.ShouldStop(16);
 __ref.getField(false,"_bitmap" /*RemoteObject*/ ).runVoidMethod ("Initialize2",(Object)((__ref.getField(false,"_inputstream" /*RemoteObject*/ ).getObject())));
- BA.debugLineNum = 71;BA.debugLine="inputStream.Close";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 70;BA.debugLine="inputStream.Close";
+Debug.ShouldStop(32);
 __ref.getField(false,"_inputstream" /*RemoteObject*/ ).runVoidMethod ("Close");
- BA.debugLineNum = 72;BA.debugLine="End Sub";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 71;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -257,20 +257,17 @@ __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runVoidMethod ("Add
  BA.debugLineNum = 60;BA.debugLine="ID = MdlConnection.dbCursor.GetInt(\"ID\")";
 Debug.ShouldStop(134217728);
 __ref.setField ("_id" /*RemoteObject*/ ,listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("ID"))));
- BA.debugLineNum = 61;BA.debugLine="Log(ID)";
-Debug.ShouldStop(268435456);
-listdocumentpage.__c.runVoidMethod ("LogImpl","51966089",BA.NumberToString(__ref.getField(true,"_id" /*RemoteObject*/ )),0);
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 63;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 62;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
+Debug.ShouldStop(536870912);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runMethod(false,"getTwoLinesAndBitmap").getField(false,"Label").runMethod(true,"setTextColor",listdocumentpage.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 64;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 63;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
+Debug.ShouldStop(1073741824);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runMethod(false,"getTwoLinesAndBitmap").getField(false,"SecondLabel").runMethod(true,"setTextColor",listdocumentpage.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 65;BA.debugLine="End Sub";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 64;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -281,17 +278,17 @@ finally {
 		}}
 public static RemoteObject  _searchdocument_textchanged(RemoteObject __ref,RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("searchDocument_TextChanged (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,90);
+		Debug.PushSubsStack("searchDocument_TextChanged (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,89);
 if (RapidSub.canDelegate("searchdocument_textchanged")) { return __ref.runUserSub(false, "listdocumentpage","searchdocument_textchanged", __ref, _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
- BA.debugLineNum = 90;BA.debugLine="Private Sub searchDocument_TextChanged (Old As Str";
+ BA.debugLineNum = 89;BA.debugLine="Private Sub searchDocument_TextChanged (Old As Str";
+Debug.ShouldStop(16777216);
+ BA.debugLineNum = 90;BA.debugLine="searchingDocument";
 Debug.ShouldStop(33554432);
- BA.debugLineNum = 91;BA.debugLine="searchingDocument";
-Debug.ShouldStop(67108864);
 __ref.runClassMethod (b4a.example.listdocumentpage.class, "_searchingdocument" /*RemoteObject*/ );
- BA.debugLineNum = 92;BA.debugLine="End Sub";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 91;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -302,45 +299,45 @@ finally {
 		}}
 public static RemoteObject  _searchingdocument(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("searchingDocument (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,94);
+		Debug.PushSubsStack("searchingDocument (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,93);
 if (RapidSub.canDelegate("searchingdocument")) { return __ref.runUserSub(false, "listdocumentpage","searchingdocument", __ref);}
 int _i = 0;
- BA.debugLineNum = 94;BA.debugLine="Sub searchingDocument";
+ BA.debugLineNum = 93;BA.debugLine="Sub searchingDocument";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 94;BA.debugLine="ListViewDocuments.Clear";
 Debug.ShouldStop(536870912);
- BA.debugLineNum = 95;BA.debugLine="ListViewDocuments.Clear";
-Debug.ShouldStop(1073741824);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runVoidMethod ("Clear");
- BA.debugLineNum = 96;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 95;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+Debug.ShouldStop(1073741824);
 listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.sql.SQL.CursorWrapper"), listdocumentpage._mdlconnection._dbsql /*RemoteObject*/ .runMethod(false,"ExecQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("SELECT * FROM documents WHERE NAME LIKE '"),__ref.getField(false,"_searchdocument" /*RemoteObject*/ ).runMethod(true,"getText"),RemoteObject.createImmutable("%'")))));
- BA.debugLineNum = 97;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 96;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
+Debug.ShouldStop(-2147483648);
 {
 final int step3 = 1;
 final int limit3 = RemoteObject.solve(new RemoteObject[] {listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"getRowCount"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _i = 0 ;
 for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 98;BA.debugLine="MdlConnection.dbCursor.Position = i";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 97;BA.debugLine="MdlConnection.dbCursor.Position = i";
+Debug.ShouldStop(1);
 listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));
- BA.debugLineNum = 100;BA.debugLine="readBlob";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 99;BA.debugLine="readBlob";
+Debug.ShouldStop(4);
 __ref.runClassMethod (b4a.example.listdocumentpage.class, "_readblob" /*RemoteObject*/ );
- BA.debugLineNum = 101;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 100;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
+Debug.ShouldStop(8);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runVoidMethod ("AddTwoLinesAndBitmap",(Object)(BA.ObjectToCharSequence(listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("ID"))))),(Object)(BA.ObjectToCharSequence(listdocumentpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("NAME"))))),(Object)((__ref.getField(false,"_bitmap" /*RemoteObject*/ ).getObject())));
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 103;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 102;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
+Debug.ShouldStop(32);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runMethod(false,"getTwoLinesAndBitmap").getField(false,"Label").runMethod(true,"setTextColor",listdocumentpage.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 104;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 103;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
+Debug.ShouldStop(64);
 __ref.getField(false,"_listviewdocuments" /*RemoteObject*/ ).runMethod(false,"getTwoLinesAndBitmap").getField(false,"SecondLabel").runMethod(true,"setTextColor",listdocumentpage.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 105;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 104;BA.debugLine="End Sub";
+Debug.ShouldStop(128);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -351,33 +348,33 @@ finally {
 		}}
 public static RemoteObject  _updatepropertiesbutton_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("UpdatePropertiesButton_Click (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,107);
+		Debug.PushSubsStack("UpdatePropertiesButton_Click (listdocumentpage) ","listdocumentpage",3,__ref.getField(false, "ba"),__ref,106);
 if (RapidSub.canDelegate("updatepropertiesbutton_click")) { return __ref.runUserSub(false, "listdocumentpage","updatepropertiesbutton_click", __ref);}
- BA.debugLineNum = 107;BA.debugLine="Private Sub UpdatePropertiesButton_Click";
+ BA.debugLineNum = 106;BA.debugLine="Private Sub UpdatePropertiesButton_Click";
+Debug.ShouldStop(512);
+ BA.debugLineNum = 107;BA.debugLine="Try";
 Debug.ShouldStop(1024);
- BA.debugLineNum = 108;BA.debugLine="Try";
+try { BA.debugLineNum = 108;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"UPDATE documen";
 Debug.ShouldStop(2048);
-try { BA.debugLineNum = 109;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"UPDATE documen";
-Debug.ShouldStop(4096);
 listdocumentpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("UPDATE documents SET NAME='"),__ref.getField(false,"_docname" /*RemoteObject*/ ).runMethod(true,"getText"),RemoteObject.createImmutable("', TYPE='"),__ref.getField(false,"_doctype" /*RemoteObject*/ ).runMethod(true,"getText"),RemoteObject.createImmutable("', EXPIRED='"),__ref.getField(false,"_docexpiry" /*RemoteObject*/ ).runMethod(true,"getText"),RemoteObject.createImmutable("'WHERE DOCUMENT_ID ='"),__ref.getField(false,"_docid" /*RemoteObject*/ ).runMethod(true,"getText"),RemoteObject.createImmutable("'"))));
- BA.debugLineNum = 110;BA.debugLine="ToastMessageShow(\"sucessfully saved document\",Fa";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 109;BA.debugLine="ToastMessageShow(\"sucessfully saved document\",Fa";
+Debug.ShouldStop(4096);
 listdocumentpage.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("sucessfully saved document")),(Object)(listdocumentpage.__c.getField(true,"False")));
- BA.debugLineNum = 111;BA.debugLine="renderDataListView";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 110;BA.debugLine="renderDataListView";
+Debug.ShouldStop(8192);
 __ref.runClassMethod (b4a.example.listdocumentpage.class, "_renderdatalistview" /*RemoteObject*/ );
- BA.debugLineNum = 112;BA.debugLine="B4XPages.ClosePage(Me)";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 111;BA.debugLine="B4XPages.ClosePage(Me)";
+Debug.ShouldStop(16384);
 listdocumentpage._b4xpages.runVoidMethod ("_closepage" /*RemoteObject*/ ,__ref.getField(false, "ba"),(Object)(__ref));
  Debug.CheckDeviceExceptions();
 } 
        catch (Exception e7) {
-			BA.rdebugUtils.runVoidMethod("setLastException",__ref.getField(false, "ba"), e7.toString()); BA.debugLineNum = 114;BA.debugLine="ToastMessageShow(\"failed\",False)";
-Debug.ShouldStop(131072);
+			BA.rdebugUtils.runVoidMethod("setLastException",__ref.getField(false, "ba"), e7.toString()); BA.debugLineNum = 113;BA.debugLine="ToastMessageShow(\"failed\",False)";
+Debug.ShouldStop(65536);
 listdocumentpage.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("failed")),(Object)(listdocumentpage.__c.getField(true,"False")));
  };
- BA.debugLineNum = 116;BA.debugLine="End Sub";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 115;BA.debugLine="End Sub";
+Debug.ShouldStop(262144);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

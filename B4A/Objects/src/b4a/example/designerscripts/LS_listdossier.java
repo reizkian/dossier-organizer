@@ -31,6 +31,32 @@ views.get("addicon").vw.setLeft((int)((8d / 100 * width)));
 views.get("addicon").vw.setWidth((int)((18d / 100 * width) - ((8d / 100 * width))));
 views.get("addlabel").vw.setLeft((int)((15d / 100 * width)));
 views.get("addlabel").vw.setWidth((int)((35d / 100 * width) - ((15d / 100 * width))));
+views.get("documentslistview").vw.setLeft((int)((0d / 100 * width)));
+views.get("documentslistview").vw.setWidth((int)((100d / 100 * width) - ((0d / 100 * width))));
+views.get("documentslistview").vw.setTop((int)((15d / 100 * height)));
+views.get("documentslistview").vw.setHeight((int)((100d / 100 * height) - ((15d / 100 * height))));
+views.get("dossierpropertiespanel").vw.setLeft((int)((0d / 100 * width)));
+views.get("dossierpropertiespanel").vw.setWidth((int)((100d / 100 * width) - ((0d / 100 * width))));
+views.get("dossierpropertiespanel").vw.setTop((int)((0d / 100 * height)));
+views.get("dossierpropertiespanel").vw.setHeight((int)((15d / 100 * height) - ((0d / 100 * height))));
+views.get("edittextdossiername").vw.setLeft((int)((10d / 100 * width)));
+views.get("edittextdossiername").vw.setWidth((int)((90d / 100 * width) - ((10d / 100 * width))));
+//BA.debugLineNum = 30;BA.debugLine="saveDossierBtn.SetLeftAndRight(60%x,95%x)"[listdossier/General script]
+views.get("savedossierbtn").vw.setLeft((int)((60d / 100 * width)));
+views.get("savedossierbtn").vw.setWidth((int)((95d / 100 * width) - ((60d / 100 * width))));
+//BA.debugLineNum = 31;BA.debugLine="saveDossierBtn.SetTopAndBottom(85%x,95%x)"[listdossier/General script]
+views.get("savedossierbtn").vw.setTop((int)((85d / 100 * width)));
+views.get("savedossierbtn").vw.setHeight((int)((95d / 100 * width) - ((85d / 100 * width))));
+//BA.debugLineNum = 32;BA.debugLine="saveDossierBtn.HorizontalCenter = 78%x"[listdossier/General script]
+views.get("savedossierbtn").vw.setLeft((int)((78d / 100 * width) - (views.get("savedossierbtn").vw.getWidth() / 2)));
+//BA.debugLineNum = 33;BA.debugLine="saveDossierBtn.VerticalCenter = 93%y"[listdossier/General script]
+views.get("savedossierbtn").vw.setTop((int)((93d / 100 * height) - (views.get("savedossierbtn").vw.getHeight() / 2)));
+//BA.debugLineNum = 35;BA.debugLine="saveIcon.SetLeftAndRight(8%x,18%x)"[listdossier/General script]
+views.get("saveicon").vw.setLeft((int)((8d / 100 * width)));
+views.get("saveicon").vw.setWidth((int)((18d / 100 * width) - ((8d / 100 * width))));
+//BA.debugLineNum = 36;BA.debugLine="saveLabel.SetLeftAndRight(15%x,35%x)"[listdossier/General script]
+views.get("savelabel").vw.setLeft((int)((15d / 100 * width)));
+views.get("savelabel").vw.setWidth((int)((35d / 100 * width) - ((15d / 100 * width))));
 
 }
 }

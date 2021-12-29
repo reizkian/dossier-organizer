@@ -34,7 +34,7 @@ if (RapidSub.canDelegate("aslist")) { return __ref.runUserSub(false, "b4xset","a
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 30;BA.debugLine="Return map.Keys";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_getkeys" /*RemoteObject*/ );
+if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_getkeys" /*RemoteObject*/ );
  BA.debugLineNum = 31;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -80,7 +80,7 @@ Debug.locals.put("Value", _value);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 18;BA.debugLine="Return map.ContainsKey(Value)";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_containskey" /*RemoteObject*/ ,(Object)(_value));
+if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_containskey" /*RemoteObject*/ ,(Object)(_value));
  BA.debugLineNum = 19;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -99,7 +99,7 @@ if (RapidSub.canDelegate("getsize")) { return __ref.runUserSub(false, "b4xset","
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 22;BA.debugLine="Return map.Size";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_getsize" /*RemoteObject*/ );
+if (true) return __ref.getField(false,"_map" /*RemoteObject*/ ).runClassMethod (b4a.example.b4xorderedmap.class, "_getsize" /*RemoteObject*/ );
  BA.debugLineNum = 23;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);

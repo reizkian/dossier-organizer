@@ -64,7 +64,6 @@ Sub renderDataListView
 		readBlob
 		ListViewDocuments.AddTwoLinesAndBitmap(MdlConnection.dbCursor.GetString("DOCUMENT_ID"), MdlConnection.dbCursor.GetString("NAME"), bitMap)
 		ID = MdlConnection.dbCursor.GetInt("ID")
-		Log(ID)
 	Next
 	ListViewDocuments.TwoLinesAndBitmap.Label.TextColor = Colors.Black
 	ListViewDocuments.TwoLinesAndBitmap.SecondLabel.TextColor = Colors.Black

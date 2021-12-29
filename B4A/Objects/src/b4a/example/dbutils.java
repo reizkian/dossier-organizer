@@ -23,37 +23,37 @@ if (Debug.shouldDelegate(null, "copydbfromassets", false))
 	 {return ((String) Debug.delegate(null, "copydbfromassets", new Object[] {_ba,_filename}));}
 anywheresoftware.b4a.objects.RuntimePermissions _runtimepermission = null;
 String _targetdir = "";
-RDebugUtils.currentLine=3145728;
- //BA.debugLineNum = 3145728;BA.debugLine="Sub CopyDBFromAssets (FileName As String) As Strin";
-RDebugUtils.currentLine=3145729;
- //BA.debugLineNum = 3145729;BA.debugLine="Dim runtimePermission As RuntimePermissions";
+RDebugUtils.currentLine=3407872;
+ //BA.debugLineNum = 3407872;BA.debugLine="Sub CopyDBFromAssets (FileName As String) As Strin";
+RDebugUtils.currentLine=3407873;
+ //BA.debugLineNum = 3407873;BA.debugLine="Dim runtimePermission As RuntimePermissions";
 _runtimepermission = new anywheresoftware.b4a.objects.RuntimePermissions();
-RDebugUtils.currentLine=3145730;
- //BA.debugLineNum = 3145730;BA.debugLine="Dim TargetDir As String";
+RDebugUtils.currentLine=3407874;
+ //BA.debugLineNum = 3407874;BA.debugLine="Dim TargetDir As String";
 _targetdir = "";
-RDebugUtils.currentLine=3145731;
- //BA.debugLineNum = 3145731;BA.debugLine="If File.ExternalWritable Then";
+RDebugUtils.currentLine=3407875;
+ //BA.debugLineNum = 3407875;BA.debugLine="If File.ExternalWritable Then";
 if (anywheresoftware.b4a.keywords.Common.File.getExternalWritable()) { 
-RDebugUtils.currentLine=3145732;
- //BA.debugLineNum = 3145732;BA.debugLine="TargetDir = runtimePermission.GetSafeDirDefaultE";
+RDebugUtils.currentLine=3407876;
+ //BA.debugLineNum = 3407876;BA.debugLine="TargetDir = runtimePermission.GetSafeDirDefaultE";
 _targetdir = _runtimepermission.GetSafeDirDefaultExternal("");
  }else {
-RDebugUtils.currentLine=3145734;
- //BA.debugLineNum = 3145734;BA.debugLine="TargetDir = File.DirInternal";
+RDebugUtils.currentLine=3407878;
+ //BA.debugLineNum = 3407878;BA.debugLine="TargetDir = File.DirInternal";
 _targetdir = anywheresoftware.b4a.keywords.Common.File.getDirInternal();
  };
-RDebugUtils.currentLine=3145736;
- //BA.debugLineNum = 3145736;BA.debugLine="If File.Exists(TargetDir, FileName) = False Then";
+RDebugUtils.currentLine=3407880;
+ //BA.debugLineNum = 3407880;BA.debugLine="If File.Exists(TargetDir, FileName) = False Then";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(_targetdir,_filename)==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=3145737;
- //BA.debugLineNum = 3145737;BA.debugLine="File.Copy(File.DirAssets, FileName, TargetDir, F";
+RDebugUtils.currentLine=3407881;
+ //BA.debugLineNum = 3407881;BA.debugLine="File.Copy(File.DirAssets, FileName, TargetDir, F";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),_filename,_targetdir,_filename);
  };
-RDebugUtils.currentLine=3145739;
- //BA.debugLineNum = 3145739;BA.debugLine="Return TargetDir";
+RDebugUtils.currentLine=3407883;
+ //BA.debugLineNum = 3407883;BA.debugLine="Return TargetDir";
 if (true) return _targetdir;
-RDebugUtils.currentLine=3145740;
- //BA.debugLineNum = 3145740;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3407884;
+ //BA.debugLineNum = 3407884;BA.debugLine="End Sub";
 return "";
 }
 }

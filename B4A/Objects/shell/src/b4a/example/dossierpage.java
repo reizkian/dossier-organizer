@@ -27,8 +27,11 @@ public static RemoteObject _idlabel = RemoteObject.declareNull("anywheresoftware
 public static RemoteObject _picture = RemoteObject.declareNull("anywheresoftware.b4a.objects.ImageViewWrapper");
 public static RemoteObject _documentlabel = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _documentslistview = RemoteObject.declareNull("b4a.example3.customlistview");
+public static RemoteObject _listviewdossier = RemoteObject.declareNull("anywheresoftware.b4a.objects.ListViewWrapper");
 public static RemoteObject _checkboxselect = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
-public static RemoteObject _selecteddocuments = null;
+public static RemoteObject _searchdossier = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _edittextdossiername = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _dossiername = RemoteObject.createImmutable("");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
@@ -36,6 +39,6 @@ public static b4a.example.starter _starter = null;
 public static b4a.example.b4xpages _b4xpages = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
-		return new Object[] {"addDossierBtn",_ref.getField(false, "_adddossierbtn"),"AddDossierPanel",_ref.getField(false, "_adddossierpanel"),"bitMap",_ref.getField(false, "_bitmap"),"Buffer",_ref.getField(false, "_buffer"),"CheckBoxSelect",_ref.getField(false, "_checkboxselect"),"documentLabel",_ref.getField(false, "_documentlabel"),"DocumentsListView",_ref.getField(false, "_documentslistview"),"DossierListPanel",_ref.getField(false, "_dossierlistpanel"),"idLabel",_ref.getField(false, "_idlabel"),"inputStream",_ref.getField(false, "_inputstream"),"lblBack",_ref.getField(false, "_lblback"),"Panel1",_ref.getField(false, "_panel1"),"picture",_ref.getField(false, "_picture"),"Root",_ref.getField(false, "_root"),"ScrollView1",_ref.getField(false, "_scrollview1"),"selectedDocuments",_ref.getField(false, "_selecteddocuments"),"stringUtils",_ref.getField(false, "_stringutils"),"xui",_ref.getField(false, "_xui")};
+		return new Object[] {"addDossierBtn",_ref.getField(false, "_adddossierbtn"),"AddDossierPanel",_ref.getField(false, "_adddossierpanel"),"bitMap",_ref.getField(false, "_bitmap"),"Buffer",_ref.getField(false, "_buffer"),"CheckBoxSelect",_ref.getField(false, "_checkboxselect"),"documentLabel",_ref.getField(false, "_documentlabel"),"DocumentsListView",_ref.getField(false, "_documentslistview"),"DossierListPanel",_ref.getField(false, "_dossierlistpanel"),"DossierName",_ref.getField(false, "_dossiername"),"EditTextDossierName",_ref.getField(false, "_edittextdossiername"),"idLabel",_ref.getField(false, "_idlabel"),"inputStream",_ref.getField(false, "_inputstream"),"lblBack",_ref.getField(false, "_lblback"),"ListViewDossier",_ref.getField(false, "_listviewdossier"),"Panel1",_ref.getField(false, "_panel1"),"picture",_ref.getField(false, "_picture"),"Root",_ref.getField(false, "_root"),"ScrollView1",_ref.getField(false, "_scrollview1"),"searchDossier",_ref.getField(false, "_searchdossier"),"stringUtils",_ref.getField(false, "_stringutils"),"xui",_ref.getField(false, "_xui")};
 }
 }

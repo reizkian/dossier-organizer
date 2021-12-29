@@ -55,7 +55,7 @@ Debug.JustUpdateDeviceLine();
 _blockvalue = __ref.getField(false,"_data" /*RemoteObject*/ ).getArrayElement(true,_dindex);Debug.locals.put("BlockValue", _blockvalue);Debug.locals.put("BlockValue", _blockvalue);
  BA.debugLineNum = 46;BA.debugLine="Return Bit.And(BlockValue, Bit.ShiftLeft(1, offse";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return BA.ObjectToBoolean(RemoteObject.solveBoolean("!",b4xbitset.__c.getField(false,"Bit").runMethod(true,"And",(Object)(_blockvalue),(Object)(b4xbitset.__c.getField(false,"Bit").runMethod(true,"ShiftLeft",(Object)(BA.numberCast(int.class, 1)),(Object)(_offset)))),BA.numberCast(double.class, 0)));
+if (true) return BA.ObjectToBoolean(RemoteObject.solveBoolean("!",b4xbitset.__c.getField(false,"Bit").runMethod(true,"And",(Object)(_blockvalue),(Object)(b4xbitset.__c.getField(false,"Bit").runMethod(true,"ShiftLeft",(Object)(BA.numberCast(int.class, 1)),(Object)(_offset)))),BA.numberCast(double.class, 0)));
  BA.debugLineNum = 47;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -74,7 +74,7 @@ if (RapidSub.canDelegate("getsize")) { return __ref.runUserSub(false, "b4xbitset
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 50;BA.debugLine="Return mSize";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_msize" /*RemoteObject*/ );
+if (true) return __ref.getField(true,"_msize" /*RemoteObject*/ );
  BA.debugLineNum = 51;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);

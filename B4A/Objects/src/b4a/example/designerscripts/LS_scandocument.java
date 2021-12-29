@@ -41,19 +41,14 @@ views.get("iconscandocument").vw.setLeft((int)((0d / 100 * width)));
 views.get("iconscandocument").vw.setWidth((int)((25d / 100 * width) - ((0d / 100 * width))));
 views.get("labelscandocument").vw.setTop((int)((1d / 100 * height)));
 views.get("labelscandocument").vw.setHeight((int)((10d / 100 * height) - ((1d / 100 * height))));
-//BA.debugLineNum = 23;BA.debugLine="labelScanDocument.SetLeftAndRight(0%x,25%x)"[ScanDocument/General script]
 views.get("labelscandocument").vw.setLeft((int)((0d / 100 * width)));
 views.get("labelscandocument").vw.setWidth((int)((25d / 100 * width) - ((0d / 100 * width))));
-//BA.debugLineNum = 25;BA.debugLine="SaveDocumentButton.SetTopAndBottom(0%y,15%y)"[ScanDocument/General script]
 views.get("savedocumentbutton").vw.setTop((int)((0d / 100 * height)));
 views.get("savedocumentbutton").vw.setHeight((int)((15d / 100 * height) - ((0d / 100 * height))));
-//BA.debugLineNum = 26;BA.debugLine="SaveDocumentButton.SetLeftAndRight(50%x,75%x)"[ScanDocument/General script]
 views.get("savedocumentbutton").vw.setLeft((int)((50d / 100 * width)));
 views.get("savedocumentbutton").vw.setWidth((int)((75d / 100 * width) - ((50d / 100 * width))));
-//BA.debugLineNum = 27;BA.debugLine="iconSaveDocument.SetTopAndBottom(1%y,10%y)"[ScanDocument/General script]
 views.get("iconsavedocument").vw.setTop((int)((1d / 100 * height)));
 views.get("iconsavedocument").vw.setHeight((int)((10d / 100 * height) - ((1d / 100 * height))));
-//BA.debugLineNum = 28;BA.debugLine="iconSaveDocument.SetLeftAndRight(0%x,25%x)"[ScanDocument/General script]
 views.get("iconsavedocument").vw.setLeft((int)((0d / 100 * width)));
 views.get("iconsavedocument").vw.setWidth((int)((25d / 100 * width) - ((0d / 100 * width))));
 //BA.debugLineNum = 29;BA.debugLine="labelSaveDocument.SetTopAndBottom(7%y,15%y)"[ScanDocument/General script]
