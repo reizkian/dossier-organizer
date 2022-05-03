@@ -287,7 +287,7 @@ if (RemoteObject.solveBoolean("g",_index,BA.numberCast(double.class, __ref.getFi
  BA.debugLineNum = 47;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
-b4xbytesbuilder.__c.runVoidMethod ("LogImpl","95767170",RemoteObject.createImmutable("Index too large"),0);};
+b4xbytesbuilder.__c.runVoidMethod ("LogImpl","93342338",RemoteObject.createImmutable("Index too large"),0);};
  BA.debugLineNum = 48;BA.debugLine="Append(Data)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xbytesbuilder.class, "_append" /*RemoteObject*/ ,(Object)(_data));
@@ -368,7 +368,7 @@ if (RemoteObject.solveBoolean("g",_index,BA.numberCast(double.class, __ref.getFi
  BA.debugLineNum = 60;BA.debugLine="If Index > mLength Then Log(\"Index too large\")";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_index,BA.numberCast(double.class, __ref.getField(true,"_mlength" /*RemoteObject*/ )))) { 
-b4xbytesbuilder.__c.runVoidMethod ("LogImpl","95832706",RemoteObject.createImmutable("Index too large"),0);};
+b4xbytesbuilder.__c.runVoidMethod ("LogImpl","93407874",RemoteObject.createImmutable("Index too large"),0);};
  BA.debugLineNum = 61;BA.debugLine="Append(Data)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xbytesbuilder.class, "_append" /*RemoteObject*/ ,(Object)(_data));

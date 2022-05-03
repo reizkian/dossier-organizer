@@ -28,9 +28,9 @@ Sub Class_Globals
 	Private SaveDocumentButton As Panel
 	Private scanView As B4XView
 	Private PropertiesPanel As Panel
-	Private ScrollViewProperties As ScrollView
-	
 	Private OpenGalleryButton As Panel
+	
+	Private ScrollViewProperties As ScrollView
 	Private docID As EditText
 	Private docName As EditText
 	Private docType As EditText
@@ -64,19 +64,32 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	Panel1.LoadLayout("scandocument")
 	scanView.Visible=False
 	PropertiesPanel.Visible = False
+	'hide properties and save button on B4XPage_created'
+	DocumentPropertiesButton.Visible = False
+	SaveDocumentButton.Visible = False
 	#if B4A
 	Provider.Initialize
 	#Else If B4i
 	Camera.Initialize("Camera", B4XPages.GetNativeParent(Me))
 	#end if
-	
 End Sub
 
 Sub lblBack_Click
+	If PropertiesPanel.Visible Then
+		PropertiesPanel.Visible=False
+		Return
+	End If
+	
 	B4XPages.ClosePage(Me)
 	scanView.SetBitmap(Null)
+	
+	'hide properties and save button on B4XPage_created'
+	DocumentPropertiesButton.Visible = False
+	SaveDocumentButton.Visible = False
+	'show scan and gallery button'
+	ScanDocumentButton.Visible = True
+	OpenGalleryButton.Visible = True
 End Sub
-'You can see the list of page related events in the B4XPagesManager object. The event name is B4XPage.
 
 Private Sub ScanDocumentButton_Click
 	TakePicture (scanView.Width, scanView.Height)
@@ -86,6 +99,13 @@ Private Sub ScanDocumentButton_Click
 		scanView.Visible=True
 		scanView.SetBitmap(bmp)
 		bitMap = bmp
+		SavePropertiesButton.Visible = False
+		'show properties and save button'
+		DocumentPropertiesButton.Visible = True
+		SaveDocumentButton.Visible = False
+		'hide scan and gallery button'
+		ScanDocumentButton.Visible = False
+		OpenGalleryButton.Visible = False
 	End If
 End Sub
 
@@ -149,6 +169,12 @@ Sub image_chooser_Result (Success As Boolean, pDir As String, pFileName As Strin
 			scanView.Visible = True
 			scanView.SetBitmap(bmp)
 			bitMap = bmp
+			'show properties and save button'
+			DocumentPropertiesButton.Visible = True
+			SaveDocumentButton.Visible = False
+			'hide scan and gallery button'
+			ScanDocumentButton.Visible = False
+			OpenGalleryButton.Visible = False
 			Log("success read image file")
 		Catch
 			Log(LastException)
@@ -184,12 +210,16 @@ Private Sub DocumentPropertiesButton_Click
 	If PropertiesPanel.Visible == False Then
 		PropertiesPanel.Visible = True
 		ScrollViewProperties.Panel.LoadLayout("properties_panel")
+		SavePropertiesButton.Visible = False
+		DocumentPropertiesButton.Visible = False
+		SaveDocumentButton.Visible = True
 	Else
 		PropertiesPanel.Visible = False
+		SavePropertiesButton.Visible = False
 	End If
 End Sub
 
-Private Sub SavePropertiesButton_Click
+Private Sub SaveProperties
 	'empty input check'
 	If docName.Text="" Then
 		MsgboxAsync("Please insert document name","Info")
@@ -205,7 +235,6 @@ Private Sub SavePropertiesButton_Click
 	documentType = docType.Text
 	documentExpiry = docExpiry.Text
 	
-	ToastMessageShow("properties saved", False)
 	Log(documentID)
 	Log(documentName)
 	
@@ -230,6 +259,7 @@ Sub saveBlob
 End Sub
 
 Private Sub SaveDocumentButton_Click
+	SaveProperties
 	'empty input check'
 	If documentName="" Then
 		MsgboxAsync("Please insert document name properties","Info")
@@ -244,4 +274,14 @@ Private Sub SaveDocumentButton_Click
 	'database write'
 	MdlConnection.dbSQL.ExecNonQuery("INSERT INTO documents(DOCUMENT_ID, NAME, TYPE, EXPIRED, SCAN) VALUES('" & documentID & "','" & documentName& "','" & documentType & "','" & documentExpiry & "','" & imgStr & "')")
 	ToastMessageShow("sucessfully saved document",False)
+	
+	SavePropertiesButton.Visible = False
+	'show properties and save button'
+	DocumentPropertiesButton.Visible = False
+	SaveDocumentButton.Visible = False
+	'hide scan and gallery button'
+	ScanDocumentButton.Visible = True
+	OpenGalleryButton.Visible = True
+	'set imageView to null'
+	scanView.SetBitmap(Null)
 End Sub

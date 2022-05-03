@@ -180,7 +180,7 @@ Debug.ShouldStop(2);
 __ref.runClassMethod (b4a.example.dossierpage.class, "_writeselecteddocs" /*RemoteObject*/ ,(Object)(_index),(Object)(_check.runMethod(true,"getChecked")));
  BA.debugLineNum = 163;BA.debugLine="Log(\"------ selected documents ------\")";
 Debug.ShouldStop(4);
-dossierpage.__c.runVoidMethod ("LogImpl","73145736",RemoteObject.createImmutable("------ selected documents ------"),0);
+dossierpage.__c.runVoidMethod ("LogImpl","010944520",RemoteObject.createImmutable("------ selected documents ------"),0);
  BA.debugLineNum = 164;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
 Debug.ShouldStop(8);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.sql.SQL.CursorWrapper"), dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runMethod(false,"ExecQuery",(Object)(RemoteObject.createImmutable("SELECT * FROM selected_docs"))));
@@ -197,7 +197,7 @@ Debug.ShouldStop(32);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));
  BA.debugLineNum = 167;BA.debugLine="Log(MdlConnection.dbCursor.GetString(\"DOCUMENT_I";
 Debug.ShouldStop(64);
-dossierpage.__c.runVoidMethod ("LogImpl","73145740",dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("DOCUMENT_ID"))),0);
+dossierpage.__c.runVoidMethod ("LogImpl","010944524",dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("DOCUMENT_ID"))),0);
  }
 }Debug.locals.put("i", _i);
 ;
@@ -452,47 +452,47 @@ finally {
 		}}
 public static RemoteObject  _logbridgetable(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("logBridgeTable (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,252);
+		Debug.PushSubsStack("logBridgeTable (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,251);
 if (RapidSub.canDelegate("logbridgetable")) { return __ref.runUserSub(false, "dossierpage","logbridgetable", __ref);}
 int _i = 0;
 RemoteObject _dossierid = RemoteObject.createImmutable(0);
 RemoteObject _docid = RemoteObject.createImmutable(0);
- BA.debugLineNum = 252;BA.debugLine="Sub logBridgeTable";
+ BA.debugLineNum = 251;BA.debugLine="Sub logBridgeTable";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 252;BA.debugLine="ListViewDossier.Clear";
 Debug.ShouldStop(134217728);
- BA.debugLineNum = 253;BA.debugLine="ListViewDossier.Clear";
-Debug.ShouldStop(268435456);
 __ref.getField(false,"_listviewdossier" /*RemoteObject*/ ).runVoidMethod ("Clear");
- BA.debugLineNum = 254;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 253;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+Debug.ShouldStop(268435456);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.sql.SQL.CursorWrapper"), dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runMethod(false,"ExecQuery",(Object)(RemoteObject.createImmutable("SELECT * FROM bridge"))));
- BA.debugLineNum = 255;BA.debugLine="Log(\"bridge table content: \")";
+ BA.debugLineNum = 254;BA.debugLine="Log(\"bridge table content: \")";
+Debug.ShouldStop(536870912);
+dossierpage.__c.runVoidMethod ("LogImpl","011468803",RemoteObject.createImmutable("bridge table content: "),0);
+ BA.debugLineNum = 255;BA.debugLine="For i=0 To MdlConnection.dbCursor.RowCount-1";
 Debug.ShouldStop(1073741824);
-dossierpage.__c.runVoidMethod ("LogImpl","719988483",RemoteObject.createImmutable("bridge table content: "),0);
- BA.debugLineNum = 256;BA.debugLine="For i=0 To MdlConnection.dbCursor.RowCount-1";
-Debug.ShouldStop(-2147483648);
 {
 final int step4 = 1;
 final int limit4 = RemoteObject.solve(new RemoteObject[] {dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"getRowCount"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _i = 0 ;
 for (;(step4 > 0 && _i <= limit4) || (step4 < 0 && _i >= limit4) ;_i = ((int)(0 + _i + step4))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 257;BA.debugLine="MdlConnection.dbCursor.Position = i";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 256;BA.debugLine="MdlConnection.dbCursor.Position = i";
+Debug.ShouldStop(-2147483648);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));
- BA.debugLineNum = 259;BA.debugLine="Dim dossierID As Int = MdlConnection.dbCursor.Ge";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 258;BA.debugLine="Dim dossierID As Int = MdlConnection.dbCursor.Ge";
+Debug.ShouldStop(2);
 _dossierid = dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("DOSSIER_ID")));Debug.locals.put("dossierID", _dossierid);Debug.locals.put("dossierID", _dossierid);
- BA.debugLineNum = 260;BA.debugLine="Dim docID As Int = MdlConnection.dbCursor.GetInt";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 259;BA.debugLine="Dim docID As Int = MdlConnection.dbCursor.GetInt";
+Debug.ShouldStop(4);
 _docid = dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("DOCUMENT_ID")));Debug.locals.put("docID", _docid);Debug.locals.put("docID", _docid);
- BA.debugLineNum = 262;BA.debugLine="Log($\"dossierID: ${dossierID} includedDocs: ${do";
-Debug.ShouldStop(32);
-dossierpage.__c.runVoidMethod ("LogImpl","719988490",(RemoteObject.concat(RemoteObject.createImmutable("dossierID: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable(" includedDocs: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_docid))),RemoteObject.createImmutable(""))),0);
+ BA.debugLineNum = 261;BA.debugLine="Log($\"dossierID: ${dossierID} includedDocs: ${do";
+Debug.ShouldStop(16);
+dossierpage.__c.runVoidMethod ("LogImpl","011468810",(RemoteObject.concat(RemoteObject.createImmutable("dossierID: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable(" includedDocs: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_docid))),RemoteObject.createImmutable(""))),0);
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 264;BA.debugLine="End Sub";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 263;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -620,33 +620,33 @@ finally {
 		}}
 public static RemoteObject  _resetdatabase(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("resetDatabase (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,240);
+		Debug.PushSubsStack("resetDatabase (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,239);
 if (RapidSub.canDelegate("resetdatabase")) { return __ref.runUserSub(false, "dossierpage","resetdatabase", __ref);}
- BA.debugLineNum = 240;BA.debugLine="Private Sub resetDatabase";
+ BA.debugLineNum = 239;BA.debugLine="Private Sub resetDatabase";
+Debug.ShouldStop(16384);
+ BA.debugLineNum = 240;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
 Debug.ShouldStop(32768);
- BA.debugLineNum = 241;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
-Debug.ShouldStop(65536);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("DROP TABLE IF EXISTS selected_docs")));
- BA.debugLineNum = 242;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE se";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 241;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE se";
+Debug.ShouldStop(65536);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("CREATE TABLE selected_docs (ID INTEGER PRIMARY KEY,DOCUMENT_ID INTEGER, SELECTED INTEGER)")));
- BA.debugLineNum = 244;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 243;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
+Debug.ShouldStop(262144);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("DROP TABLE IF EXISTS dossier")));
- BA.debugLineNum = 245;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE do";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 244;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE do";
+Debug.ShouldStop(524288);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("CREATE TABLE dossier (ID INTEGER PRIMARY KEY,NAME TEXT)")));
- BA.debugLineNum = 247;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 246;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
+Debug.ShouldStop(2097152);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("DROP TABLE IF EXISTS bridge")));
- BA.debugLineNum = 248;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE br";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 247;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE br";
+Debug.ShouldStop(4194304);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("CREATE TABLE bridge (ID INTEGER PRIMARY KEY,DOSSIER_ID INTEGER, DOCUMENT_ID INTEGER)")));
- BA.debugLineNum = 249;BA.debugLine="Log(\"------ RESET DATABASE: hard ------\")";
+ BA.debugLineNum = 248;BA.debugLine="Log(\"------ RESET DATABASE: hard ------\")";
+Debug.ShouldStop(8388608);
+dossierpage.__c.runVoidMethod ("LogImpl","011403273",RemoteObject.createImmutable("------ RESET DATABASE: hard ------"),0);
+ BA.debugLineNum = 249;BA.debugLine="End Sub";
 Debug.ShouldStop(16777216);
-dossierpage.__c.runVoidMethod ("LogImpl","717235977",RemoteObject.createImmutable("------ RESET DATABASE: hard ------"),0);
- BA.debugLineNum = 250;BA.debugLine="End Sub";
-Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -657,21 +657,21 @@ finally {
 		}}
 public static RemoteObject  _resetselecteddocuments(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("resetSelectedDocuments (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,228);
+		Debug.PushSubsStack("resetSelectedDocuments (dossierpage) ","dossierpage",4,__ref.getField(false, "ba"),__ref,227);
 if (RapidSub.canDelegate("resetselecteddocuments")) { return __ref.runUserSub(false, "dossierpage","resetselecteddocuments", __ref);}
- BA.debugLineNum = 228;BA.debugLine="Private Sub resetSelectedDocuments";
+ BA.debugLineNum = 227;BA.debugLine="Private Sub resetSelectedDocuments";
+Debug.ShouldStop(4);
+ BA.debugLineNum = 228;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
 Debug.ShouldStop(8);
- BA.debugLineNum = 229;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DROP TABLE IF E";
-Debug.ShouldStop(16);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("DROP TABLE IF EXISTS selected_docs")));
- BA.debugLineNum = 230;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE se";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 229;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"CREATE TABLE se";
+Debug.ShouldStop(16);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.createImmutable("CREATE TABLE selected_docs (ID INTEGER PRIMARY KEY,DOCUMENT_ID INTEGER, SELECTED INTEGER)")));
- BA.debugLineNum = 237;BA.debugLine="Log(\"------ RESET DATABASE: selected_doc ------\")";
+ BA.debugLineNum = 236;BA.debugLine="Log(\"------ RESET DATABASE: selected_doc ------\")";
+Debug.ShouldStop(2048);
+dossierpage.__c.runVoidMethod ("LogImpl","011337737",RemoteObject.createImmutable("------ RESET DATABASE: selected_doc ------"),0);
+ BA.debugLineNum = 237;BA.debugLine="End Sub";
 Debug.ShouldStop(4096);
-dossierpage.__c.runVoidMethod ("LogImpl","715400969",RemoteObject.createImmutable("------ RESET DATABASE: selected_doc ------"),0);
- BA.debugLineNum = 238;BA.debugLine="End Sub";
-Debug.ShouldStop(8192);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -698,64 +698,64 @@ __ref.setField ("_dossiername" /*RemoteObject*/ ,__ref.getField(false,"_edittext
  BA.debugLineNum = 206;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
 Debug.ShouldStop(8192);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.sql.SQL.CursorWrapper"), dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runMethod(false,"ExecQuery",(Object)(RemoteObject.createImmutable("SELECT ID,NAME FROM dossier"))));
- BA.debugLineNum = 209;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 208;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
+Debug.ShouldStop(32768);
 {
 final int step4 = 1;
 final int limit4 = RemoteObject.solve(new RemoteObject[] {dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"getRowCount"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _i = 0 ;
 for (;(step4 > 0 && _i <= limit4) || (step4 < 0 && _i >= limit4) ;_i = ((int)(0 + _i + step4))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 210;BA.debugLine="MdlConnection.dbCursor.Position = i";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 209;BA.debugLine="MdlConnection.dbCursor.Position = i";
+Debug.ShouldStop(65536);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));
- BA.debugLineNum = 211;BA.debugLine="If MdlConnection.dbCursor.GetString(\"NAME\") = Do";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 210;BA.debugLine="If MdlConnection.dbCursor.GetString(\"NAME\") = Do";
+Debug.ShouldStop(131072);
 if (RemoteObject.solveBoolean("=",dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("NAME"))),__ref.getField(true,"_dossiername" /*RemoteObject*/ ))) { 
- BA.debugLineNum = 212;BA.debugLine="DossierID = MdlConnection.dbCursor.GetInt(\"ID\")";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 211;BA.debugLine="DossierID = MdlConnection.dbCursor.GetInt(\"ID\")";
+Debug.ShouldStop(262144);
 _dossierid = dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("ID")));Debug.locals.put("DossierID", _dossierid);
  };
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 215;BA.debugLine="MdlConnection.dbCursor.Close";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 214;BA.debugLine="MdlConnection.dbCursor.Close";
+Debug.ShouldStop(2097152);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runVoidMethod ("Close");
- BA.debugLineNum = 216;BA.debugLine="Log($\"get dossier ID: ${DossierID} of ${DossierNa";
-Debug.ShouldStop(8388608);
-dossierpage.__c.runVoidMethod ("LogImpl","715728653",(RemoteObject.concat(RemoteObject.createImmutable("get dossier ID: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable(" of "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((__ref.getField(true,"_dossiername" /*RemoteObject*/ )))),RemoteObject.createImmutable(" "))),0);
- BA.debugLineNum = 218;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 215;BA.debugLine="Log($\"get dossier ID: ${DossierID} of ${DossierNa";
+Debug.ShouldStop(4194304);
+dossierpage.__c.runVoidMethod ("LogImpl","011272204",(RemoteObject.concat(RemoteObject.createImmutable("get dossier ID: "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable(" of "),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((__ref.getField(true,"_dossiername" /*RemoteObject*/ )))),RemoteObject.createImmutable(" "))),0);
+ BA.debugLineNum = 217;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+Debug.ShouldStop(16777216);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/  = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.sql.SQL.CursorWrapper"), dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runMethod(false,"ExecQuery",(Object)(RemoteObject.createImmutable("SELECT DOCUMENT_ID,SELECTED FROM selected_docs"))));
- BA.debugLineNum = 219;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 218;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
+Debug.ShouldStop(33554432);
 {
 final int step13 = 1;
 final int limit13 = RemoteObject.solve(new RemoteObject[] {dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"getRowCount"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _i = 0 ;
 for (;(step13 > 0 && _i <= limit13) || (step13 < 0 && _i >= limit13) ;_i = ((int)(0 + _i + step13))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 220;BA.debugLine="MdlConnection.dbCursor.Position = i";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 219;BA.debugLine="MdlConnection.dbCursor.Position = i";
+Debug.ShouldStop(67108864);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"setPosition",BA.numberCast(int.class, _i));
- BA.debugLineNum = 221;BA.debugLine="Dim docID As Int = MdlConnection.dbCursor.GetInt";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 220;BA.debugLine="Dim docID As Int = MdlConnection.dbCursor.GetInt";
+Debug.ShouldStop(134217728);
 _docid = dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("DOCUMENT_ID")));Debug.locals.put("docID", _docid);Debug.locals.put("docID", _docid);
- BA.debugLineNum = 222;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"INSERT INTO br";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 221;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"INSERT INTO br";
+Debug.ShouldStop(268435456);
 dossierpage._mdlconnection._dbsql /*RemoteObject*/ .runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("INSERT INTO bridge(DOSSIER_ID, DOCUMENT_ID) VALUES('"),_dossierid,RemoteObject.createImmutable("','"),_docid,RemoteObject.createImmutable("')"))));
- BA.debugLineNum = 223;BA.debugLine="Log($\"put value to bridge table, dossierID:${Dos";
-Debug.ShouldStop(1073741824);
-dossierpage.__c.runVoidMethod ("LogImpl","715728660",(RemoteObject.concat(RemoteObject.createImmutable("put value to bridge table, dossierID:"),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable("  docID:"),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_docid))),RemoteObject.createImmutable(" "))),0);
+ BA.debugLineNum = 222;BA.debugLine="Log($\"put value to bridge table, dossierID:${Dos";
+Debug.ShouldStop(536870912);
+dossierpage.__c.runVoidMethod ("LogImpl","011272211",(RemoteObject.concat(RemoteObject.createImmutable("put value to bridge table, dossierID:"),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_dossierid))),RemoteObject.createImmutable("  docID:"),dossierpage.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_docid))),RemoteObject.createImmutable(" "))),0);
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 225;BA.debugLine="MdlConnection.dbCursor.Close";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 224;BA.debugLine="MdlConnection.dbCursor.Close";
+Debug.ShouldStop(-2147483648);
 dossierpage._mdlconnection._dbcursor /*RemoteObject*/ .runVoidMethod ("Close");
- BA.debugLineNum = 226;BA.debugLine="End Sub";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 225;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

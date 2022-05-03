@@ -24,19 +24,19 @@ RDebugUtils.currentModule="mdlconnection";
 if (Debug.shouldDelegate(null, "connection", false))
 	 {return ((String) Debug.delegate(null, "connection", new Object[] {_ba}));}
 String _str = "";
-RDebugUtils.currentLine=3538944;
- //BA.debugLineNum = 3538944;BA.debugLine="Sub connection";
-RDebugUtils.currentLine=3538945;
- //BA.debugLineNum = 3538945;BA.debugLine="Dim str As String";
+RDebugUtils.currentLine=11730944;
+ //BA.debugLineNum = 11730944;BA.debugLine="Sub connection";
+RDebugUtils.currentLine=11730945;
+ //BA.debugLineNum = 11730945;BA.debugLine="Dim str As String";
 _str = "";
-RDebugUtils.currentLine=3538946;
- //BA.debugLineNum = 3538946;BA.debugLine="str = DBUtils.CopyDBFromAssets(\"dossier_organizer";
+RDebugUtils.currentLine=11730946;
+ //BA.debugLineNum = 11730946;BA.debugLine="str = DBUtils.CopyDBFromAssets(\"dossier_organizer";
 _str = mostCurrent._dbutils._copydbfromassets /*String*/ (_ba,"dossier_organizer.db");
-RDebugUtils.currentLine=3538947;
- //BA.debugLineNum = 3538947;BA.debugLine="dbSQL.Initialize(str, \"dossier_organizer.db\", Tru";
+RDebugUtils.currentLine=11730947;
+ //BA.debugLineNum = 11730947;BA.debugLine="dbSQL.Initialize(str, \"dossier_organizer.db\", Tru";
 _dbsql.Initialize(_str,"dossier_organizer.db",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3538948;
- //BA.debugLineNum = 3538948;BA.debugLine="End Sub";
+RDebugUtils.currentLine=11730948;
+ //BA.debugLineNum = 11730948;BA.debugLine="End Sub";
 return "";
 }
 }

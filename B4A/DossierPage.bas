@@ -210,8 +210,7 @@ Private Sub saveDossierBridge
 	Dim DossierID As Int
 	DossierName = EditTextDossierName.Text
 	MdlConnection.dbCursor = MdlConnection.dbSQL.ExecQuery("SELECT ID,NAME FROM dossier")
-	
-	
+
 	For i = 0 To MdlConnection.dbCursor.RowCount-1
 		MdlConnection.dbCursor.Position = i
 		If MdlConnection.dbCursor.GetString("NAME") = DossierName Then

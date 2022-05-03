@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
-NavigationStack=DossierPage,logBridgeTable,249,0,DossierPage,saveDossierName,185,0,DossierPage,saveDossierBridge,187,0,DossierPage,BoolToInt,169,0,DossierPage,createDocumentsListItem,137,0,DossierPage,ListViewDossier_ItemLongClick,118,0,DossierPage,renderDossierList,89,0,DossierPage,ListViewDossier_ItemCLick,97,0,DossierPage,searchingDossier,128,6,DossierPage,searchDossier_TextChanged,124,0
+NavigationStack=ScanDocumentPage,image_chooser_Result,167,1,ScanDocumentPage,OpenGalleryButton_Click,240,0,ScanDocumentPage,saveBlob,246,0,ScanDocumentPage,DocumentPropertiesButton_Click,214,6,ScanDocumentPage,ScanDocumentButton_Click,95,6,ScanDocumentPage,SaveProperties,230,0,ScanDocumentPage,TakePicture,116,0,ScanDocumentPage,B4XPage_Created,63,0,ScanDocumentPage,lblBack_Click,77,6,ScanDocumentPage,SaveDocumentButton_Click,270,6
 SelectedBuild=0
 VisibleModules=1,6,4,3
