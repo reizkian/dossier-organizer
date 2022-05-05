@@ -23,6 +23,7 @@ Sub Class_Globals
 	Private docName As EditText
 	Private docType As EditText
 	Private docExpiry As EditText
+	Private scanView As B4XView
 	
 	Private ListPanel As Panel
 	Private UpdatePanel As Panel
@@ -80,6 +81,12 @@ Private Sub ListViewDocuments_ItemClick(Position As Int, Value As Object)
 	ListPanel.Visible = False
 	UpdatePanel.Visible = True
 	docID.Text = Value
+	MdlConnection.dbCursor = MdlConnection.dbSQL.ExecQuery("SELECT * FROM documents WHERE DOCUMENT_ID='"& Value & "'")
+	MdlConnection.dbCursor.Position = 0
+	docName.Text = MdlConnection.dbCursor.GetString("NAME")
+	docType.Text = MdlConnection.dbCursor.GetString("TYPE")
+	docExpiry.Text = MdlConnection.dbCursor.GetString("EXPIRED")
+
 End Sub
 
 Private Sub listViewDocuments_ItemLongClick (Position As Int, Value As Object)

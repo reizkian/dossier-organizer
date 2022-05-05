@@ -39,6 +39,7 @@ views.get("dossierpropertiespanel").vw.setLeft((int)((0d / 100 * width)));
 views.get("dossierpropertiespanel").vw.setWidth((int)((100d / 100 * width) - ((0d / 100 * width))));
 views.get("dossierpropertiespanel").vw.setTop((int)((0d / 100 * height)));
 views.get("dossierpropertiespanel").vw.setHeight((int)((15d / 100 * height) - ((0d / 100 * height))));
+//BA.debugLineNum = 28;BA.debugLine="EditTextDossierName.SetLeftAndRight(10%x,90%x)"[listdossier/General script]
 views.get("edittextdossiername").vw.setLeft((int)((10d / 100 * width)));
 views.get("edittextdossiername").vw.setWidth((int)((90d / 100 * width) - ((10d / 100 * width))));
 //BA.debugLineNum = 30;BA.debugLine="saveDossierBtn.SetLeftAndRight(60%x,95%x)"[listdossier/General script]

@@ -47,12 +47,14 @@ public boolean isSingleton() {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _dbsql = RemoteObject.declareNull("anywheresoftware.b4a.sql.SQL");
 public static RemoteObject _dbcursor = RemoteObject.declareNull("anywheresoftware.b4a.sql.SQL.CursorWrapper");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.b4xpages _b4xpages = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"dbCursor",mdlconnection._dbcursor,"dbSQL",mdlconnection._dbsql,"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"DateUtils",mdlconnection.mostCurrent._dateutils,"dbCursor",mdlconnection._dbcursor,"dbSQL",mdlconnection._dbsql,"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

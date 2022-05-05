@@ -7,6 +7,7 @@ Version=10.7
 Sub Class_Globals
 	Private Root As B4XView 'ignore
 	Private xui As XUI 'ignore
+	
 	Dim ScrollView1 As ScrollView
 	Dim Panel1 As Panel
 	Dim lblBack As Label
@@ -48,6 +49,8 @@ Sub Class_Globals
 	Dim Buffer() As Byte
 	Dim outputStream As OutputStream
 	Dim imgStr As String
+	Private Dialog As B4XDialog
+	Private DateTemplate As B4XDateTemplate
 End Sub
 
 'You can add more parameters here.
@@ -64,9 +67,16 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 	Panel1.LoadLayout("scandocument")
 	scanView.Visible=False
 	PropertiesPanel.Visible = False
+	
 	'hide properties and save button on B4XPage_created'
 	DocumentPropertiesButton.Visible = False
 	SaveDocumentButton.Visible = False
+	
+	'initalize dialog'
+	Dialog.Initialize(Root)
+	DateTemplate.Initialize
+	DateTemplate.MinYear = 2016
+	DateTemplate.MaxYear = 2030
 	#if B4A
 	Provider.Initialize
 	#Else If B4i
@@ -213,6 +223,7 @@ Private Sub DocumentPropertiesButton_Click
 		SavePropertiesButton.Visible = False
 		DocumentPropertiesButton.Visible = False
 		SaveDocumentButton.Visible = True
+		
 	Else
 		PropertiesPanel.Visible = False
 		SavePropertiesButton.Visible = False
@@ -239,6 +250,20 @@ Private Sub SaveProperties
 	Log(documentName)
 	
 	PropertiesPanel.Visible=False
+End Sub
+
+Private Sub docExpiry_EnterPressed
+	Log("Enter Pressed")
+End Sub
+
+'Invoke Dialog when Edit Text is focused'
+Private Sub docExpiry_FocusChanged (HasFocus As Boolean)
+	If HasFocus Then
+		Wait For (Dialog.ShowTemplate(DateTemplate, "", "", "CANCEL")) Complete (Result As Int)
+		If Result = xui.DialogResponse_Positive Then
+			docExpiry.Text = DateTime.Date(DateTemplate.Date)
+		End If
+	End If
 End Sub
 
 
@@ -282,6 +307,4 @@ Private Sub SaveDocumentButton_Click
 	'hide scan and gallery button'
 	ScanDocumentButton.Visible = True
 	OpenGalleryButton.Visible = True
-	'set imageView to null'
-	scanView.SetBitmap(Null)
 End Sub

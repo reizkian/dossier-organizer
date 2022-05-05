@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
-NavigationStack=ScanDocumentPage,image_chooser_Result,167,1,ScanDocumentPage,OpenGalleryButton_Click,240,0,ScanDocumentPage,saveBlob,246,0,ScanDocumentPage,DocumentPropertiesButton_Click,214,6,ScanDocumentPage,ScanDocumentButton_Click,95,6,ScanDocumentPage,SaveProperties,230,0,ScanDocumentPage,TakePicture,116,0,ScanDocumentPage,B4XPage_Created,63,0,ScanDocumentPage,lblBack_Click,77,6,ScanDocumentPage,SaveDocumentButton_Click,270,6
+NavigationStack=ListDocumentPage,UpdatePropertiesButton_Click,120,0,ScanDocumentPage,SaveProperties,247,1,ListDocumentPage,Class_Globals,19,0,ScanDocumentPage,Class_Globals,23,0,ListDocumentPage,renderDataListView,58,0,DossierPage,Class_Globals,0,0,Visual Designer,listdocument.bal,-100,6,ScanDocumentPage,TakePicture,154,0,ListDocumentPage,readBlob,70,0,ListDocumentPage,ListViewDocuments_ItemClick,82,6
 SelectedBuild=0
 VisibleModules=1,6,4,3

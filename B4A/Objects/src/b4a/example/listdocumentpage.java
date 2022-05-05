@@ -46,27 +46,30 @@ public anywheresoftware.b4a.objects.EditTextWrapper _docid = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _docname = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _doctype = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _docexpiry = null;
+public anywheresoftware.b4a.objects.B4XViewWrapper _scanview = null;
 public anywheresoftware.b4a.objects.PanelWrapper _listpanel = null;
 public anywheresoftware.b4a.objects.PanelWrapper _updatepanel = null;
+public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.dbutils _dbutils = null;
 public b4a.example.mdlconnection _mdlconnection = null;
 public b4a.example.starter _starter = null;
 public b4a.example.b4xpages _b4xpages = null;
 public b4a.example.b4xcollections _b4xcollections = null;
+public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public Object  _initialize(b4a.example.listdocumentpage __ref,anywheresoftware.b4a.BA _ba) throws Exception{
 __ref = this;
 innerInitialize(_ba);
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((Object) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=9371648;
- //BA.debugLineNum = 9371648;BA.debugLine="Public Sub Initialize As Object";
-RDebugUtils.currentLine=9371649;
- //BA.debugLineNum = 9371649;BA.debugLine="Return Me";
+RDebugUtils.currentLine=1900544;
+ //BA.debugLineNum = 1900544;BA.debugLine="Public Sub Initialize As Object";
+RDebugUtils.currentLine=1900545;
+ //BA.debugLineNum = 1900545;BA.debugLine="Return Me";
 if (true) return this;
-RDebugUtils.currentLine=9371650;
- //BA.debugLineNum = 9371650;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1900546;
+ //BA.debugLineNum = 1900546;BA.debugLine="End Sub";
 return null;
 }
 public String  _b4xpage_created(b4a.example.listdocumentpage __ref,anywheresoftware.b4a.objects.B4XViewWrapper _root1) throws Exception{
@@ -74,31 +77,31 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "b4xpage_created", false))
 	 {return ((String) Debug.delegate(ba, "b4xpage_created", new Object[] {_root1}));}
-RDebugUtils.currentLine=9437184;
- //BA.debugLineNum = 9437184;BA.debugLine="Private Sub B4XPage_Created (Root1 As B4XView)";
-RDebugUtils.currentLine=9437185;
- //BA.debugLineNum = 9437185;BA.debugLine="Root = Root1";
+RDebugUtils.currentLine=1966080;
+ //BA.debugLineNum = 1966080;BA.debugLine="Private Sub B4XPage_Created (Root1 As B4XView)";
+RDebugUtils.currentLine=1966081;
+ //BA.debugLineNum = 1966081;BA.debugLine="Root = Root1";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = _root1;
-RDebugUtils.currentLine=9437187;
- //BA.debugLineNum = 9437187;BA.debugLine="Root.LoadLayout(\"Header\")";
+RDebugUtils.currentLine=1966083;
+ //BA.debugLineNum = 1966083;BA.debugLine="Root.LoadLayout(\"Header\")";
 __ref._root /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("Header",ba);
-RDebugUtils.currentLine=9437188;
- //BA.debugLineNum = 9437188;BA.debugLine="lblBack.Visible=True";
+RDebugUtils.currentLine=1966084;
+ //BA.debugLineNum = 1966084;BA.debugLine="lblBack.Visible=True";
 __ref._lblback /*anywheresoftware.b4a.objects.LabelWrapper*/ .setVisible(__c.True);
-RDebugUtils.currentLine=9437189;
- //BA.debugLineNum = 9437189;BA.debugLine="ScrollView1.Panel.LoadLayout(\"listdocument\")";
+RDebugUtils.currentLine=1966085;
+ //BA.debugLineNum = 1966085;BA.debugLine="ScrollView1.Panel.LoadLayout(\"listdocument\")";
 __ref._scrollview1 /*anywheresoftware.b4a.objects.ScrollViewWrapper*/ .getPanel().LoadLayout("listdocument",ba);
-RDebugUtils.currentLine=9437191;
- //BA.debugLineNum = 9437191;BA.debugLine="UpdatePanel.Visible = False";
+RDebugUtils.currentLine=1966087;
+ //BA.debugLineNum = 1966087;BA.debugLine="UpdatePanel.Visible = False";
 __ref._updatepanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.False);
-RDebugUtils.currentLine=9437192;
- //BA.debugLineNum = 9437192;BA.debugLine="ListPanel.Visible = True";
+RDebugUtils.currentLine=1966088;
+ //BA.debugLineNum = 1966088;BA.debugLine="ListPanel.Visible = True";
 __ref._listpanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.True);
-RDebugUtils.currentLine=9437193;
- //BA.debugLineNum = 9437193;BA.debugLine="renderDataListView";
+RDebugUtils.currentLine=1966089;
+ //BA.debugLineNum = 1966089;BA.debugLine="renderDataListView";
 __ref._renderdatalistview /*String*/ (null);
-RDebugUtils.currentLine=9437194;
- //BA.debugLineNum = 9437194;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1966090;
+ //BA.debugLineNum = 1966090;BA.debugLine="End Sub";
 return "";
 }
 public String  _renderdatalistview(b4a.example.listdocumentpage __ref) throws Exception{
@@ -107,104 +110,107 @@ RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "renderdatalistview", false))
 	 {return ((String) Debug.delegate(ba, "renderdatalistview", null));}
 int _i = 0;
-RDebugUtils.currentLine=9568256;
- //BA.debugLineNum = 9568256;BA.debugLine="Sub renderDataListView";
-RDebugUtils.currentLine=9568257;
- //BA.debugLineNum = 9568257;BA.debugLine="ListViewDocuments.Clear";
+RDebugUtils.currentLine=2097152;
+ //BA.debugLineNum = 2097152;BA.debugLine="Sub renderDataListView";
+RDebugUtils.currentLine=2097153;
+ //BA.debugLineNum = 2097153;BA.debugLine="ListViewDocuments.Clear";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .Clear();
-RDebugUtils.currentLine=9568258;
- //BA.debugLineNum = 9568258;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+RDebugUtils.currentLine=2097154;
+ //BA.debugLineNum = 2097154;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
 _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/  = (anywheresoftware.b4a.sql.SQL.CursorWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.CursorWrapper(), (android.database.Cursor)(_mdlconnection._dbsql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM documents")));
-RDebugUtils.currentLine=9568259;
- //BA.debugLineNum = 9568259;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
+RDebugUtils.currentLine=2097155;
+ //BA.debugLineNum = 2097155;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
 {
 final int step3 = 1;
 final int limit3 = (int) (_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .getRowCount()-1);
 _i = (int) (0) ;
 for (;_i <= limit3 ;_i = _i + step3 ) {
-RDebugUtils.currentLine=9568260;
- //BA.debugLineNum = 9568260;BA.debugLine="MdlConnection.dbCursor.Position = i";
+RDebugUtils.currentLine=2097156;
+ //BA.debugLineNum = 2097156;BA.debugLine="MdlConnection.dbCursor.Position = i";
 _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .setPosition(_i);
-RDebugUtils.currentLine=9568262;
- //BA.debugLineNum = 9568262;BA.debugLine="readBlob";
+RDebugUtils.currentLine=2097158;
+ //BA.debugLineNum = 2097158;BA.debugLine="readBlob";
 __ref._readblob /*String*/ (null);
-RDebugUtils.currentLine=9568263;
- //BA.debugLineNum = 9568263;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
+RDebugUtils.currentLine=2097159;
+ //BA.debugLineNum = 2097159;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .AddTwoLinesAndBitmap(BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("DOCUMENT_ID")),BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("NAME")),(android.graphics.Bitmap)(__ref._bitmap /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/ .getObject()));
-RDebugUtils.currentLine=9568264;
- //BA.debugLineNum = 9568264;BA.debugLine="ID = MdlConnection.dbCursor.GetInt(\"ID\")";
+RDebugUtils.currentLine=2097160;
+ //BA.debugLineNum = 2097160;BA.debugLine="ID = MdlConnection.dbCursor.GetInt(\"ID\")";
 __ref._id /*int*/  = _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetInt("ID");
  }
 };
-RDebugUtils.currentLine=9568266;
- //BA.debugLineNum = 9568266;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
+RDebugUtils.currentLine=2097162;
+ //BA.debugLineNum = 2097162;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .getTwoLinesAndBitmap().Label.setTextColor(__c.Colors.Black);
-RDebugUtils.currentLine=9568267;
- //BA.debugLineNum = 9568267;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
+RDebugUtils.currentLine=2097163;
+ //BA.debugLineNum = 2097163;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .getTwoLinesAndBitmap().SecondLabel.setTextColor(__c.Colors.Black);
-RDebugUtils.currentLine=9568268;
- //BA.debugLineNum = 9568268;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2097164;
+ //BA.debugLineNum = 2097164;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.listdocumentpage __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
-RDebugUtils.currentLine=9306112;
- //BA.debugLineNum = 9306112;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=9306113;
- //BA.debugLineNum = 9306113;BA.debugLine="Private Root As B4XView 'ignore";
+RDebugUtils.currentLine=1835008;
+ //BA.debugLineNum = 1835008;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=1835009;
+ //BA.debugLineNum = 1835009;BA.debugLine="Private Root As B4XView 'ignore";
 _root = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=9306114;
- //BA.debugLineNum = 9306114;BA.debugLine="Private xui As XUI 'ignore";
+RDebugUtils.currentLine=1835010;
+ //BA.debugLineNum = 1835010;BA.debugLine="Private xui As XUI 'ignore";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=9306115;
- //BA.debugLineNum = 9306115;BA.debugLine="Dim ScrollView1 As ScrollView";
+RDebugUtils.currentLine=1835011;
+ //BA.debugLineNum = 1835011;BA.debugLine="Dim ScrollView1 As ScrollView";
 _scrollview1 = new anywheresoftware.b4a.objects.ScrollViewWrapper();
-RDebugUtils.currentLine=9306116;
- //BA.debugLineNum = 9306116;BA.debugLine="Dim lblBack As Label";
+RDebugUtils.currentLine=1835012;
+ //BA.debugLineNum = 1835012;BA.debugLine="Dim lblBack As Label";
 _lblback = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=9306118;
- //BA.debugLineNum = 9306118;BA.debugLine="Private ListViewDocuments As ListView";
+RDebugUtils.currentLine=1835014;
+ //BA.debugLineNum = 1835014;BA.debugLine="Private ListViewDocuments As ListView";
 _listviewdocuments = new anywheresoftware.b4a.objects.ListViewWrapper();
-RDebugUtils.currentLine=9306119;
- //BA.debugLineNum = 9306119;BA.debugLine="Private searchDocument As EditText";
+RDebugUtils.currentLine=1835015;
+ //BA.debugLineNum = 1835015;BA.debugLine="Private searchDocument As EditText";
 _searchdocument = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=9306121;
- //BA.debugLineNum = 9306121;BA.debugLine="Dim bitMap As Bitmap";
+RDebugUtils.currentLine=1835017;
+ //BA.debugLineNum = 1835017;BA.debugLine="Dim bitMap As Bitmap";
 _bitmap = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper();
-RDebugUtils.currentLine=9306122;
- //BA.debugLineNum = 9306122;BA.debugLine="Dim Buffer() As Byte";
+RDebugUtils.currentLine=1835018;
+ //BA.debugLineNum = 1835018;BA.debugLine="Dim Buffer() As Byte";
 _buffer = new byte[(int) (0)];
 ;
-RDebugUtils.currentLine=9306123;
- //BA.debugLineNum = 9306123;BA.debugLine="Dim stringUtils As StringUtils";
+RDebugUtils.currentLine=1835019;
+ //BA.debugLineNum = 1835019;BA.debugLine="Dim stringUtils As StringUtils";
 _stringutils = new anywheresoftware.b4a.objects.StringUtils();
-RDebugUtils.currentLine=9306124;
- //BA.debugLineNum = 9306124;BA.debugLine="Dim inputStream As InputStream";
+RDebugUtils.currentLine=1835020;
+ //BA.debugLineNum = 1835020;BA.debugLine="Dim inputStream As InputStream";
 _inputstream = new anywheresoftware.b4a.objects.streams.File.InputStreamWrapper();
-RDebugUtils.currentLine=9306126;
- //BA.debugLineNum = 9306126;BA.debugLine="Private ID As Int";
+RDebugUtils.currentLine=1835022;
+ //BA.debugLineNum = 1835022;BA.debugLine="Private ID As Int";
 _id = 0;
-RDebugUtils.currentLine=9306127;
- //BA.debugLineNum = 9306127;BA.debugLine="Private docID As EditText";
+RDebugUtils.currentLine=1835023;
+ //BA.debugLineNum = 1835023;BA.debugLine="Private docID As EditText";
 _docid = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=9306128;
- //BA.debugLineNum = 9306128;BA.debugLine="Private docName As EditText";
+RDebugUtils.currentLine=1835024;
+ //BA.debugLineNum = 1835024;BA.debugLine="Private docName As EditText";
 _docname = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=9306129;
- //BA.debugLineNum = 9306129;BA.debugLine="Private docType As EditText";
+RDebugUtils.currentLine=1835025;
+ //BA.debugLineNum = 1835025;BA.debugLine="Private docType As EditText";
 _doctype = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=9306130;
- //BA.debugLineNum = 9306130;BA.debugLine="Private docExpiry As EditText";
+RDebugUtils.currentLine=1835026;
+ //BA.debugLineNum = 1835026;BA.debugLine="Private docExpiry As EditText";
 _docexpiry = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=9306132;
- //BA.debugLineNum = 9306132;BA.debugLine="Private ListPanel As Panel";
+RDebugUtils.currentLine=1835027;
+ //BA.debugLineNum = 1835027;BA.debugLine="Private scanView As B4XView";
+_scanview = new anywheresoftware.b4a.objects.B4XViewWrapper();
+RDebugUtils.currentLine=1835029;
+ //BA.debugLineNum = 1835029;BA.debugLine="Private ListPanel As Panel";
 _listpanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=9306133;
- //BA.debugLineNum = 9306133;BA.debugLine="Private UpdatePanel As Panel";
+RDebugUtils.currentLine=1835030;
+ //BA.debugLineNum = 1835030;BA.debugLine="Private UpdatePanel As Panel";
 _updatepanel = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=9306134;
- //BA.debugLineNum = 9306134;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1835031;
+ //BA.debugLineNum = 1835031;BA.debugLine="End Sub";
 return "";
 }
 public String  _lblback_click(b4a.example.listdocumentpage __ref) throws Exception{
@@ -212,24 +218,24 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "lblback_click", false))
 	 {return ((String) Debug.delegate(ba, "lblback_click", null));}
-RDebugUtils.currentLine=9502720;
- //BA.debugLineNum = 9502720;BA.debugLine="Private Sub lblBack_Click";
-RDebugUtils.currentLine=9502721;
- //BA.debugLineNum = 9502721;BA.debugLine="If UpdatePanel.Visible = True Then";
+RDebugUtils.currentLine=2031616;
+ //BA.debugLineNum = 2031616;BA.debugLine="Private Sub lblBack_Click";
+RDebugUtils.currentLine=2031617;
+ //BA.debugLineNum = 2031617;BA.debugLine="If UpdatePanel.Visible = True Then";
 if (__ref._updatepanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .getVisible()==__c.True) { 
-RDebugUtils.currentLine=9502722;
- //BA.debugLineNum = 9502722;BA.debugLine="UpdatePanel.Visible = False";
+RDebugUtils.currentLine=2031618;
+ //BA.debugLineNum = 2031618;BA.debugLine="UpdatePanel.Visible = False";
 __ref._updatepanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.False);
-RDebugUtils.currentLine=9502723;
- //BA.debugLineNum = 9502723;BA.debugLine="ListPanel.Visible = True";
+RDebugUtils.currentLine=2031619;
+ //BA.debugLineNum = 2031619;BA.debugLine="ListPanel.Visible = True";
 __ref._listpanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.True);
  }else {
-RDebugUtils.currentLine=9502725;
- //BA.debugLineNum = 9502725;BA.debugLine="B4XPages.ClosePage(Me)";
+RDebugUtils.currentLine=2031621;
+ //BA.debugLineNum = 2031621;BA.debugLine="B4XPages.ClosePage(Me)";
 _b4xpages._closepage /*String*/ (ba,this);
  };
-RDebugUtils.currentLine=9502727;
- //BA.debugLineNum = 9502727;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2031623;
+ //BA.debugLineNum = 2031623;BA.debugLine="End Sub";
 return "";
 }
 public String  _listviewdocuments_itemclick(b4a.example.listdocumentpage __ref,int _position,Object _value) throws Exception{
@@ -237,19 +243,34 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "listviewdocuments_itemclick", false))
 	 {return ((String) Debug.delegate(ba, "listviewdocuments_itemclick", new Object[] {_position,_value}));}
-RDebugUtils.currentLine=9699328;
- //BA.debugLineNum = 9699328;BA.debugLine="Private Sub ListViewDocuments_ItemClick(Position A";
-RDebugUtils.currentLine=9699329;
- //BA.debugLineNum = 9699329;BA.debugLine="ListPanel.Visible = False";
+RDebugUtils.currentLine=2228224;
+ //BA.debugLineNum = 2228224;BA.debugLine="Private Sub ListViewDocuments_ItemClick(Position A";
+RDebugUtils.currentLine=2228225;
+ //BA.debugLineNum = 2228225;BA.debugLine="ListPanel.Visible = False";
 __ref._listpanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.False);
-RDebugUtils.currentLine=9699330;
- //BA.debugLineNum = 9699330;BA.debugLine="UpdatePanel.Visible = True";
+RDebugUtils.currentLine=2228226;
+ //BA.debugLineNum = 2228226;BA.debugLine="UpdatePanel.Visible = True";
 __ref._updatepanel /*anywheresoftware.b4a.objects.PanelWrapper*/ .setVisible(__c.True);
-RDebugUtils.currentLine=9699331;
- //BA.debugLineNum = 9699331;BA.debugLine="docID.Text = Value";
+RDebugUtils.currentLine=2228227;
+ //BA.debugLineNum = 2228227;BA.debugLine="docID.Text = Value";
 __ref._docid /*anywheresoftware.b4a.objects.EditTextWrapper*/ .setText(BA.ObjectToCharSequence(_value));
-RDebugUtils.currentLine=9699332;
- //BA.debugLineNum = 9699332;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2228228;
+ //BA.debugLineNum = 2228228;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/  = (anywheresoftware.b4a.sql.SQL.CursorWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.CursorWrapper(), (android.database.Cursor)(_mdlconnection._dbsql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM documents WHERE DOCUMENT_ID='"+BA.ObjectToString(_value)+"'")));
+RDebugUtils.currentLine=2228229;
+ //BA.debugLineNum = 2228229;BA.debugLine="MdlConnection.dbCursor.Position = 0";
+_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .setPosition((int) (0));
+RDebugUtils.currentLine=2228230;
+ //BA.debugLineNum = 2228230;BA.debugLine="docName.Text = MdlConnection.dbCursor.GetString(\"";
+__ref._docname /*anywheresoftware.b4a.objects.EditTextWrapper*/ .setText(BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("NAME")));
+RDebugUtils.currentLine=2228231;
+ //BA.debugLineNum = 2228231;BA.debugLine="docType.Text = MdlConnection.dbCursor.GetString(\"";
+__ref._doctype /*anywheresoftware.b4a.objects.EditTextWrapper*/ .setText(BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("TYPE")));
+RDebugUtils.currentLine=2228232;
+ //BA.debugLineNum = 2228232;BA.debugLine="docExpiry.Text = MdlConnection.dbCursor.GetString";
+__ref._docexpiry /*anywheresoftware.b4a.objects.EditTextWrapper*/ .setText(BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("EXPIRED")));
+RDebugUtils.currentLine=2228234;
+ //BA.debugLineNum = 2228234;BA.debugLine="End Sub";
 return "";
 }
 public String  _listviewdocuments_itemlongclick(b4a.example.listdocumentpage __ref,int _position,Object _value) throws Exception{
@@ -258,26 +279,26 @@ RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "listviewdocuments_itemlongclick", false))
 	 {return ((String) Debug.delegate(ba, "listviewdocuments_itemlongclick", new Object[] {_position,_value}));}
 int _x = 0;
-RDebugUtils.currentLine=9764864;
- //BA.debugLineNum = 9764864;BA.debugLine="Private Sub listViewDocuments_ItemLongClick (Posit";
-RDebugUtils.currentLine=9764865;
- //BA.debugLineNum = 9764865;BA.debugLine="Dim x As Int";
+RDebugUtils.currentLine=2293760;
+ //BA.debugLineNum = 2293760;BA.debugLine="Private Sub listViewDocuments_ItemLongClick (Posit";
+RDebugUtils.currentLine=2293761;
+ //BA.debugLineNum = 2293761;BA.debugLine="Dim x As Int";
 _x = 0;
-RDebugUtils.currentLine=9764866;
- //BA.debugLineNum = 9764866;BA.debugLine="x = Msgbox2(\"Delete document?\",\"info\", \"Yes\",\"\",";
+RDebugUtils.currentLine=2293762;
+ //BA.debugLineNum = 2293762;BA.debugLine="x = Msgbox2(\"Delete document?\",\"info\", \"Yes\",\"\",";
 _x = __c.Msgbox2(BA.ObjectToCharSequence("Delete document?"),BA.ObjectToCharSequence("info"),"Yes","","No",(android.graphics.Bitmap)(__c.Null),ba);
-RDebugUtils.currentLine=9764867;
- //BA.debugLineNum = 9764867;BA.debugLine="If x = DialogResponse.POSITIVE Then";
+RDebugUtils.currentLine=2293763;
+ //BA.debugLineNum = 2293763;BA.debugLine="If x = DialogResponse.POSITIVE Then";
 if (_x==__c.DialogResponse.POSITIVE) { 
-RDebugUtils.currentLine=9764868;
- //BA.debugLineNum = 9764868;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DELETE FROM do";
+RDebugUtils.currentLine=2293764;
+ //BA.debugLineNum = 2293764;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"DELETE FROM do";
 _mdlconnection._dbsql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("DELETE FROM documents WHERE DOCUMENT_ID='"+BA.ObjectToString(_value)+"'");
  };
-RDebugUtils.currentLine=9764871;
- //BA.debugLineNum = 9764871;BA.debugLine="renderDataListView";
+RDebugUtils.currentLine=2293767;
+ //BA.debugLineNum = 2293767;BA.debugLine="renderDataListView";
 __ref._renderdatalistview /*String*/ (null);
-RDebugUtils.currentLine=9764872;
- //BA.debugLineNum = 9764872;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2293768;
+ //BA.debugLineNum = 2293768;BA.debugLine="End Sub";
 return "";
 }
 public String  _readblob(b4a.example.listdocumentpage __ref) throws Exception{
@@ -285,22 +306,22 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "readblob", false))
 	 {return ((String) Debug.delegate(ba, "readblob", null));}
-RDebugUtils.currentLine=9633792;
- //BA.debugLineNum = 9633792;BA.debugLine="Sub readBlob";
-RDebugUtils.currentLine=9633793;
- //BA.debugLineNum = 9633793;BA.debugLine="Buffer = stringUtils.DecodeBase64(MdlConnection.d";
+RDebugUtils.currentLine=2162688;
+ //BA.debugLineNum = 2162688;BA.debugLine="Sub readBlob";
+RDebugUtils.currentLine=2162689;
+ //BA.debugLineNum = 2162689;BA.debugLine="Buffer = stringUtils.DecodeBase64(MdlConnection.d";
 __ref._buffer /*byte[]*/  = __ref._stringutils /*anywheresoftware.b4a.objects.StringUtils*/ .DecodeBase64(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("SCAN"));
-RDebugUtils.currentLine=9633794;
- //BA.debugLineNum = 9633794;BA.debugLine="inputStream.InitializeFromBytesArray(Buffer, 0, B";
+RDebugUtils.currentLine=2162690;
+ //BA.debugLineNum = 2162690;BA.debugLine="inputStream.InitializeFromBytesArray(Buffer, 0, B";
 __ref._inputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ .InitializeFromBytesArray(__ref._buffer /*byte[]*/ ,(int) (0),__ref._buffer /*byte[]*/ .length);
-RDebugUtils.currentLine=9633795;
- //BA.debugLineNum = 9633795;BA.debugLine="bitMap.Initialize2(inputStream)";
+RDebugUtils.currentLine=2162691;
+ //BA.debugLineNum = 2162691;BA.debugLine="bitMap.Initialize2(inputStream)";
 __ref._bitmap /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/ .Initialize2((java.io.InputStream)(__ref._inputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ .getObject()));
-RDebugUtils.currentLine=9633796;
- //BA.debugLineNum = 9633796;BA.debugLine="inputStream.Close";
+RDebugUtils.currentLine=2162692;
+ //BA.debugLineNum = 2162692;BA.debugLine="inputStream.Close";
 __ref._inputstream /*anywheresoftware.b4a.objects.streams.File.InputStreamWrapper*/ .Close();
-RDebugUtils.currentLine=9633797;
- //BA.debugLineNum = 9633797;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2162693;
+ //BA.debugLineNum = 2162693;BA.debugLine="End Sub";
 return "";
 }
 public String  _searchdocument_textchanged(b4a.example.listdocumentpage __ref,String _old,String _new) throws Exception{
@@ -308,13 +329,13 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "searchdocument_textchanged", false))
 	 {return ((String) Debug.delegate(ba, "searchdocument_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=9830400;
- //BA.debugLineNum = 9830400;BA.debugLine="Private Sub searchDocument_TextChanged (Old As Str";
-RDebugUtils.currentLine=9830401;
- //BA.debugLineNum = 9830401;BA.debugLine="searchingDocument";
+RDebugUtils.currentLine=2359296;
+ //BA.debugLineNum = 2359296;BA.debugLine="Private Sub searchDocument_TextChanged (Old As Str";
+RDebugUtils.currentLine=2359297;
+ //BA.debugLineNum = 2359297;BA.debugLine="searchingDocument";
 __ref._searchingdocument /*String*/ (null);
-RDebugUtils.currentLine=9830402;
- //BA.debugLineNum = 9830402;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2359298;
+ //BA.debugLineNum = 2359298;BA.debugLine="End Sub";
 return "";
 }
 public String  _searchingdocument(b4a.example.listdocumentpage __ref) throws Exception{
@@ -323,40 +344,40 @@ RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "searchingdocument", false))
 	 {return ((String) Debug.delegate(ba, "searchingdocument", null));}
 int _i = 0;
-RDebugUtils.currentLine=9895936;
- //BA.debugLineNum = 9895936;BA.debugLine="Sub searchingDocument";
-RDebugUtils.currentLine=9895937;
- //BA.debugLineNum = 9895937;BA.debugLine="ListViewDocuments.Clear";
+RDebugUtils.currentLine=2424832;
+ //BA.debugLineNum = 2424832;BA.debugLine="Sub searchingDocument";
+RDebugUtils.currentLine=2424833;
+ //BA.debugLineNum = 2424833;BA.debugLine="ListViewDocuments.Clear";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .Clear();
-RDebugUtils.currentLine=9895938;
- //BA.debugLineNum = 9895938;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
+RDebugUtils.currentLine=2424834;
+ //BA.debugLineNum = 2424834;BA.debugLine="MdlConnection.dbCursor = MdlConnection.dbSQL.Exec";
 _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/  = (anywheresoftware.b4a.sql.SQL.CursorWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.sql.SQL.CursorWrapper(), (android.database.Cursor)(_mdlconnection._dbsql /*anywheresoftware.b4a.sql.SQL*/ .ExecQuery("SELECT * FROM documents WHERE NAME LIKE '"+__ref._searchdocument /*anywheresoftware.b4a.objects.EditTextWrapper*/ .getText()+"%'")));
-RDebugUtils.currentLine=9895939;
- //BA.debugLineNum = 9895939;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
+RDebugUtils.currentLine=2424835;
+ //BA.debugLineNum = 2424835;BA.debugLine="For i = 0 To MdlConnection.dbCursor.RowCount-1";
 {
 final int step3 = 1;
 final int limit3 = (int) (_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .getRowCount()-1);
 _i = (int) (0) ;
 for (;_i <= limit3 ;_i = _i + step3 ) {
-RDebugUtils.currentLine=9895940;
- //BA.debugLineNum = 9895940;BA.debugLine="MdlConnection.dbCursor.Position = i";
+RDebugUtils.currentLine=2424836;
+ //BA.debugLineNum = 2424836;BA.debugLine="MdlConnection.dbCursor.Position = i";
 _mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .setPosition(_i);
-RDebugUtils.currentLine=9895942;
- //BA.debugLineNum = 9895942;BA.debugLine="readBlob";
+RDebugUtils.currentLine=2424838;
+ //BA.debugLineNum = 2424838;BA.debugLine="readBlob";
 __ref._readblob /*String*/ (null);
-RDebugUtils.currentLine=9895943;
- //BA.debugLineNum = 9895943;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
+RDebugUtils.currentLine=2424839;
+ //BA.debugLineNum = 2424839;BA.debugLine="ListViewDocuments.AddTwoLinesAndBitmap(MdlConnec";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .AddTwoLinesAndBitmap(BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("ID")),BA.ObjectToCharSequence(_mdlconnection._dbcursor /*anywheresoftware.b4a.sql.SQL.CursorWrapper*/ .GetString("NAME")),(android.graphics.Bitmap)(__ref._bitmap /*anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper*/ .getObject()));
  }
 };
-RDebugUtils.currentLine=9895945;
- //BA.debugLineNum = 9895945;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
+RDebugUtils.currentLine=2424841;
+ //BA.debugLineNum = 2424841;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.Label.TextCol";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .getTwoLinesAndBitmap().Label.setTextColor(__c.Colors.Black);
-RDebugUtils.currentLine=9895946;
- //BA.debugLineNum = 9895946;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
+RDebugUtils.currentLine=2424842;
+ //BA.debugLineNum = 2424842;BA.debugLine="ListViewDocuments.TwoLinesAndBitmap.SecondLabel.T";
 __ref._listviewdocuments /*anywheresoftware.b4a.objects.ListViewWrapper*/ .getTwoLinesAndBitmap().SecondLabel.setTextColor(__c.Colors.Black);
-RDebugUtils.currentLine=9895947;
- //BA.debugLineNum = 9895947;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2424843;
+ //BA.debugLineNum = 2424843;BA.debugLine="End Sub";
 return "";
 }
 public String  _updatepropertiesbutton_click(b4a.example.listdocumentpage __ref) throws Exception{
@@ -364,30 +385,30 @@ __ref = this;
 RDebugUtils.currentModule="listdocumentpage";
 if (Debug.shouldDelegate(ba, "updatepropertiesbutton_click", false))
 	 {return ((String) Debug.delegate(ba, "updatepropertiesbutton_click", null));}
-RDebugUtils.currentLine=9961472;
- //BA.debugLineNum = 9961472;BA.debugLine="Private Sub UpdatePropertiesButton_Click";
-RDebugUtils.currentLine=9961473;
- //BA.debugLineNum = 9961473;BA.debugLine="Try";
-try {RDebugUtils.currentLine=9961474;
- //BA.debugLineNum = 9961474;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"UPDATE documen";
+RDebugUtils.currentLine=2490368;
+ //BA.debugLineNum = 2490368;BA.debugLine="Private Sub UpdatePropertiesButton_Click";
+RDebugUtils.currentLine=2490369;
+ //BA.debugLineNum = 2490369;BA.debugLine="Try";
+try {RDebugUtils.currentLine=2490370;
+ //BA.debugLineNum = 2490370;BA.debugLine="MdlConnection.dbSQL.ExecNonQuery(\"UPDATE documen";
 _mdlconnection._dbsql /*anywheresoftware.b4a.sql.SQL*/ .ExecNonQuery("UPDATE documents SET NAME='"+__ref._docname /*anywheresoftware.b4a.objects.EditTextWrapper*/ .getText()+"', TYPE='"+__ref._doctype /*anywheresoftware.b4a.objects.EditTextWrapper*/ .getText()+"', EXPIRED='"+__ref._docexpiry /*anywheresoftware.b4a.objects.EditTextWrapper*/ .getText()+"'WHERE DOCUMENT_ID ='"+__ref._docid /*anywheresoftware.b4a.objects.EditTextWrapper*/ .getText()+"'");
-RDebugUtils.currentLine=9961475;
- //BA.debugLineNum = 9961475;BA.debugLine="ToastMessageShow(\"sucessfully saved document\",Fa";
+RDebugUtils.currentLine=2490371;
+ //BA.debugLineNum = 2490371;BA.debugLine="ToastMessageShow(\"sucessfully saved document\",Fa";
 __c.ToastMessageShow(BA.ObjectToCharSequence("sucessfully saved document"),__c.False);
-RDebugUtils.currentLine=9961476;
- //BA.debugLineNum = 9961476;BA.debugLine="renderDataListView";
+RDebugUtils.currentLine=2490372;
+ //BA.debugLineNum = 2490372;BA.debugLine="renderDataListView";
 __ref._renderdatalistview /*String*/ (null);
-RDebugUtils.currentLine=9961477;
- //BA.debugLineNum = 9961477;BA.debugLine="B4XPages.ClosePage(Me)";
+RDebugUtils.currentLine=2490373;
+ //BA.debugLineNum = 2490373;BA.debugLine="B4XPages.ClosePage(Me)";
 _b4xpages._closepage /*String*/ (ba,this);
  } 
        catch (Exception e7) {
-			ba.setLastException(e7);RDebugUtils.currentLine=9961479;
- //BA.debugLineNum = 9961479;BA.debugLine="ToastMessageShow(\"failed\",False)";
+			ba.setLastException(e7);RDebugUtils.currentLine=2490375;
+ //BA.debugLineNum = 2490375;BA.debugLine="ToastMessageShow(\"failed\",False)";
 __c.ToastMessageShow(BA.ObjectToCharSequence("failed"),__c.False);
  };
-RDebugUtils.currentLine=9961481;
- //BA.debugLineNum = 9961481;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2490377;
+ //BA.debugLineNum = 2490377;BA.debugLine="End Sub";
 return "";
 }
 }

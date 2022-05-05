@@ -26,15 +26,18 @@ public static RemoteObject _docid = RemoteObject.declareNull("anywheresoftware.b
 public static RemoteObject _docname = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _doctype = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _docexpiry = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _scanview = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 public static RemoteObject _listpanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _updatepanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.b4xpages _b4xpages = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
-		return new Object[] {"bitMap",_ref.getField(false, "_bitmap"),"Buffer",_ref.getField(false, "_buffer"),"docExpiry",_ref.getField(false, "_docexpiry"),"docID",_ref.getField(false, "_docid"),"docName",_ref.getField(false, "_docname"),"docType",_ref.getField(false, "_doctype"),"ID",_ref.getField(false, "_id"),"inputStream",_ref.getField(false, "_inputstream"),"lblBack",_ref.getField(false, "_lblback"),"ListPanel",_ref.getField(false, "_listpanel"),"ListViewDocuments",_ref.getField(false, "_listviewdocuments"),"Root",_ref.getField(false, "_root"),"ScrollView1",_ref.getField(false, "_scrollview1"),"searchDocument",_ref.getField(false, "_searchdocument"),"stringUtils",_ref.getField(false, "_stringutils"),"UpdatePanel",_ref.getField(false, "_updatepanel"),"xui",_ref.getField(false, "_xui")};
+		return new Object[] {"bitMap",_ref.getField(false, "_bitmap"),"Buffer",_ref.getField(false, "_buffer"),"DateUtils",_ref.getField(false, "_dateutils"),"docExpiry",_ref.getField(false, "_docexpiry"),"docID",_ref.getField(false, "_docid"),"docName",_ref.getField(false, "_docname"),"docType",_ref.getField(false, "_doctype"),"ID",_ref.getField(false, "_id"),"inputStream",_ref.getField(false, "_inputstream"),"lblBack",_ref.getField(false, "_lblback"),"ListPanel",_ref.getField(false, "_listpanel"),"ListViewDocuments",_ref.getField(false, "_listviewdocuments"),"Root",_ref.getField(false, "_root"),"scanView",_ref.getField(false, "_scanview"),"ScrollView1",_ref.getField(false, "_scrollview1"),"searchDocument",_ref.getField(false, "_searchdocument"),"stringUtils",_ref.getField(false, "_stringutils"),"UpdatePanel",_ref.getField(false, "_updatepanel"),"xui",_ref.getField(false, "_xui")};
 }
 }

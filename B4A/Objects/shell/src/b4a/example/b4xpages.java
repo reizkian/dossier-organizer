@@ -48,12 +48,14 @@ public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.
 public static RemoteObject _mpm = RemoteObject.declareNull("Object");
 public static RemoteObject _delegate = RemoteObject.declareNull("b4a.example.b4xpagesdelegator");
 public static RemoteObject _globalcontext = RemoteObject.declareNull("Object");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Delegate",b4xpages._delegate,"GlobalContext",b4xpages._globalcontext,"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"mPM",b4xpages._mpm,"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"DateUtils",b4xpages.mostCurrent._dateutils,"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Delegate",b4xpages._delegate,"GlobalContext",b4xpages._globalcontext,"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"mPM",b4xpages._mpm,"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

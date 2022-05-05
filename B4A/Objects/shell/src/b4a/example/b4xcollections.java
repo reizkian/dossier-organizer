@@ -45,12 +45,14 @@ public boolean isSingleton() {
         throw new RuntimeException("CREATE is not supported.");
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.b4xpages _b4xpages = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"DateUtils",b4xcollections.mostCurrent._dateutils,"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

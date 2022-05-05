@@ -51,12 +51,14 @@ public boolean isSingleton() {
 		runMethod(false, method, args);
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
 public static b4a.example.b4xpages _b4xpages = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"Service",starter.mostCurrent._service};
+		return new Object[] {"B4XCollections",Debug.moduleToString(b4a.example.b4xcollections.class),"B4XPages",Debug.moduleToString(b4a.example.b4xpages.class),"DateUtils",starter.mostCurrent._dateutils,"DBUtils",Debug.moduleToString(b4a.example.dbutils.class),"Main",Debug.moduleToString(b4a.example.main.class),"MdlConnection",Debug.moduleToString(b4a.example.mdlconnection.class),"Service",starter.mostCurrent._service,"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

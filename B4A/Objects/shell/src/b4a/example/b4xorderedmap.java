@@ -13,13 +13,15 @@ public class b4xorderedmap {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _map = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 public static RemoteObject _list = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.dbutils _dbutils = null;
 public static b4a.example.mdlconnection _mdlconnection = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.b4xpages _b4xpages = null;
 public static b4a.example.b4xcollections _b4xcollections = null;
+public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
-		return new Object[] {"list",_ref.getField(false, "_list"),"map",_ref.getField(false, "_map")};
+		return new Object[] {"DateUtils",_ref.getField(false, "_dateutils"),"list",_ref.getField(false, "_list"),"map",_ref.getField(false, "_map")};
 }
 }

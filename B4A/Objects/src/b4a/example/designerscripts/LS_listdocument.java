@@ -8,7 +8,6 @@ public class LS_listdocument{
 
 public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
-anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
 views.get("listviewdocuments").vw.setLeft((int)((0d / 100 * width)));
 views.get("listviewdocuments").vw.setWidth((int)((100d / 100 * width) - ((0d / 100 * width))));
 views.get("listviewdocuments").vw.setTop((int)((10d / 100 * height)));
@@ -27,7 +26,6 @@ views.get("docid").vw.setTop((int)((3d / 100 * height)));
 views.get("docid").vw.setHeight((int)((13d / 100 * height) - ((3d / 100 * height))));
 views.get("docname").vw.setLeft((int)((5d / 100 * width)));
 views.get("docname").vw.setWidth((int)((95d / 100 * width) - ((5d / 100 * width))));
-//BA.debugLineNum = 16;BA.debugLine="docName.SetTopAndBottom(16%y, 26%y)"[listdocument/General script]
 views.get("docname").vw.setTop((int)((16d / 100 * height)));
 views.get("docname").vw.setHeight((int)((26d / 100 * height) - ((16d / 100 * height))));
 //BA.debugLineNum = 17;BA.debugLine="docType.SetLeftAndRight(5%x, 95%x)"[listdocument/General script]
@@ -42,16 +40,16 @@ views.get("docexpiry").vw.setWidth((int)((95d / 100 * width) - ((5d / 100 * widt
 //BA.debugLineNum = 20;BA.debugLine="docExpiry.SetTopAndBottom(42%y, 52%y)"[listdocument/General script]
 views.get("docexpiry").vw.setTop((int)((42d / 100 * height)));
 views.get("docexpiry").vw.setHeight((int)((52d / 100 * height) - ((42d / 100 * height))));
-//BA.debugLineNum = 22;BA.debugLine="UpdatePropertiesButton.SetLeftAndRight(20%x, 80%x)"[listdocument/General script]
+//BA.debugLineNum = 24;BA.debugLine="UpdatePropertiesButton.SetLeftAndRight(20%x, 80%x)"[listdocument/General script]
 views.get("updatepropertiesbutton").vw.setLeft((int)((20d / 100 * width)));
 views.get("updatepropertiesbutton").vw.setWidth((int)((80d / 100 * width) - ((20d / 100 * width))));
-//BA.debugLineNum = 23;BA.debugLine="UpdatePropertiesButton.SetTopAndBottom(57%y, 67%y)"[listdocument/General script]
-views.get("updatepropertiesbutton").vw.setTop((int)((57d / 100 * height)));
-views.get("updatepropertiesbutton").vw.setHeight((int)((67d / 100 * height) - ((57d / 100 * height))));
-//BA.debugLineNum = 24;BA.debugLine="iconSaveProperties.SetLeftAndRight(0%x, 10%x)"[listdocument/General script]
+//BA.debugLineNum = 25;BA.debugLine="UpdatePropertiesButton.SetTopAndBottom(90%y, 100%y)"[listdocument/General script]
+views.get("updatepropertiesbutton").vw.setTop((int)((90d / 100 * height)));
+views.get("updatepropertiesbutton").vw.setHeight((int)((100d / 100 * height) - ((90d / 100 * height))));
+//BA.debugLineNum = 26;BA.debugLine="iconSaveProperties.SetLeftAndRight(0%x, 10%x)"[listdocument/General script]
 views.get("iconsaveproperties").vw.setLeft((int)((0d / 100 * width)));
 views.get("iconsaveproperties").vw.setWidth((int)((10d / 100 * width) - ((0d / 100 * width))));
-//BA.debugLineNum = 25;BA.debugLine="iconSaveLabel.SetLeftAndRight(12%x,60%x)"[listdocument/General script]
+//BA.debugLineNum = 27;BA.debugLine="iconSaveLabel.SetLeftAndRight(12%x,60%x)"[listdocument/General script]
 views.get("iconsavelabel").vw.setLeft((int)((12d / 100 * width)));
 views.get("iconsavelabel").vw.setWidth((int)((60d / 100 * width) - ((12d / 100 * width))));
 
